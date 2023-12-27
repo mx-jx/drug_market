@@ -1,0 +1,7 @@
+
+The following two records had their secondary drug coded as "0" which doesn't correspond to the coding system so I've removed the "0" and have interpretted it sa not having seold a secondary drug
+
+DBNST005	dbn	Mzinyathi	19/08/2020	14h45	1	Runner	1	1	0	1			300			2			0													1	100			3	0.3					3			Inanda	Mtshebheni			4	6	0
+PEKV003	pe	Walmer	30/08/2020	13h10	1	Mert	2	2	0		0			170			2		0													1		200				4	0.2				2		Port Elizabeth				20	0	0
+
+For the secondary drug variable, what I've done is replaced all blank cells with "0" which represents did not sell a secondary drug.

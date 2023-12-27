@@ -1,0 +1,66 @@
+﻿,Code,Value,Comment
+Form number,,,
+City,,,City where seller interview took place
+Ward,,,Name of ward where seller sells
+Date,,,DD-MMM-YYYY
+Time,,,
+Gender,1,Male,"Gender, based on interviewer's review of seller"
+,2,Female,
+,3,TG,
+,,,
+Level in drug market_code,1,Lowest,Lowest level - sells to users
+,2,2nd,Second tier
+,3,3rd or above,Third level or higher
+Level in drug market_term,,,"Use local term, based way to describe person"
+,,,
+"Q1, 2",1,Heroin,
+,2,Crack cocaine,
+,3,Powder cocaine,
+,4,Meth,
+,,,
+Q4,,,"insert the gram amount for each drug sold per week, on average"
+,,,
+,,,
+Q5,0,No change,
+,1,Increased,
+,2,Decreased,
+,,NA,Level NA blank
+,,,
+Q6,0,No,"If no, questions 6a - c should be blank"
+,1,Yes,
+,,,
+Q6a,,,Enter the number of people per drug
+Qba_unit,,Number of units,
+Q6b_g,,Number of grams,
+Q6c,1,Daily,Code appropriately
+,2,2-3 times a week,
+,3,Weekly,
+,4,Monthly,
+,,,
+Q7,0,No,"If no, questions 7a - c should be blank"
+,1,Yes,
+,,,
+Q7a,,,Enter the number of people per drug
+Q7a_unit,,Number of units,
+Q7b_g,,Number of grams,
+Q7c,1,1,
+,2,2-Jun,
+,3,Daily,
+,4,Twice a day,
+,5,3 or more times a day,
+,,,
+Q8,,,"Note the different areas serviced, list one ward per cell if more than one"
+,,,
+,,,
+Q9,,Number,Insert number of years
+,,,
+Q10,,Number of sellers_lower,Insert first (lower number)
+,,Number of sellers_upper,"Insert second number, if provided, if not, repeat the first number"
+Q9c,1,1,
+,2,2-Jun,
+,3,Daily,
+,,,
+Q11,0,No,
+,1,Yes,
+,,,
+For measurements,"use "".""",,
