@@ -1,0 +1,110 @@
+---
+title: "analysis"
+output: html_document
+date: "2023-12-28"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, include=FALSE)
+```
+
+```{r}
+# Drug Market Tables
+# Tables
+
+# Load packages
+pacman::p_load(
+  ggplot2 ,    # plotting and graphing results
+  rlang,      # read in excel files
+  forcats,    # read in excel files
+  broom,      # tidy code
+  readxl,     # read in excel files
+  pacman,     # loading and reading in packages
+  rio,        # importing data
+  here,       # relative file pathways
+  janitor,    # data cleaning and tables
+  lubridate,  # working with dates
+  matchmaker, # dictionary-based cleaning
+  epikit,     # age_categories() function
+  tidyverse,  # data management and visualization
+  gtsummary,  # logistic regression and plotting results
+  gt,         # for gtsummary
+  flextable,  # table creation and manipulating
+  finalfit,   # logistic regression and plotting results
+  survminer,  # forest plots
+  easystats,
+  BiocManager,
+  survival,
+  forestplot,
+  rticles,     # templates for scientific journal articles in RMarkdown
+  jtools,
+  corrplot,
+  bstfun,
+  ggforestplot,
+  codebookr,
+  codebook,
+  sjlabelled,
+ ~ likert,
+  kableExtra,
+  haven,
+  tableone, 
+  summarytools
+)
+
+# load data
+#
+load(
+  here::here("data_processed", "drug_market_working.rda"))
+
+load(
+  here::here("data_processed", "drug_market_factors.rda"))
+
+# Create a theme for figures, tables and all processed text
+
+apa_theme <- function (ft)  {
+  ft %>%
+    flextable::font(fontname = "Times New Roman", part = "all") %>%
+    flextable::fontsize(size = 10, part = "all") %>%
+    flextable::align(align = "left", part = "all") %>%
+    flextable::align(align = "left", part = "header") %>%
+    #flextable::rotate(rotation = "lrtb", align = "top", part = "body") %>%
+    flextable::border_remove() %>%
+    flextable::hline_top(border = officer::fp_border(width = 1.5), part = "all") %>%
+    flextable::hline_bottom(border = officer::fp_border(width = 1.5), part = "all") %>%
+    flextable::hline_bottom(border = officer::fp_border(width = 1.5), part = "header") %>%
+    flextable::hline_bottom(border = officer::fp_border(width = 1.5), part = "footer") %>%
+    flextable::hline_bottom(border = officer::fp_border(width = 2), part = "all") %>%
+    flextable::autofit()
+}
+
+# Set the theme to compact [reduce spacing around text and numbers]
+
+## Set the theme as a compact [spacing]
+set_gtsummary_theme(theme_gtsummary_compact())
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r drug-market, results="asis", warning=FALSE}
+print(dfSummary(drug_market, 
+                varnumbers   = FALSE,
+                valid.col    = FALSE,
+                graph.magnif = 0.76), 
+      max.tbl.height = 300,
+      method = "render")
+```
+
+```{r, include = FALSE}
+library(magrittr)
+drug_market %>%
+  descr(stats = "common") %>%
+  tb()
+```
+
+
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
