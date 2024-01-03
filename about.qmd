@@ -1,0 +1,53 @@
+---
+title: "About"
+image: images/profile.png
+about:
+  template: solana
+  links:
+    - icon: envelope
+      text: Email
+      href: mjstowe@kirby.edu.au
+    - icon: github
+      text: Github
+      href: https://github.com/mx-jx
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/siobhon_egan
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/siobhon-egan/
+    - icon: google
+      text: GoogleScholar
+      href: https://scholar.google.com/citations?user=BrX5o08AAAAJ&hl=en&oi=ao
+    - icon: eyeglasses
+      text: scopus
+      href: https://www.scopus.com/authid/detail.uri?authorId=57202210372&amp;eid=2-s2.0-85047463715
+    - icon: bookmark-fill
+      text: ORCID
+      href: https://orcid.org/0000-0003-4395-4069
+    - icon: journal
+      text: ResearchGate
+      href: https://www.researchgate.net/profile/Siobhon_Egan
+    - icon: globe
+      text: ResearcherID (WoS)
+      href: http://www.webofscience.com/wos/author/record/AAM-5841-2021
+from: markdown+emoji
+---
+
+## Welcome!
+
+I am an early career researcher at the University of New South Wales, NSW, Australia. I am currently a PhD candidate within the [Kirby Institute](https://www.murdoch.edu.au/research/hfi/our-centres/centre-for-computational-and-systems-medicine). My research is boradly focused on understanding the various interventions to reduce health and social harms experienced by peope who use drugs. My PhD research is focussed on opioid agonist therapy (OAT) and related characteristics as an approach to mmitigate drug related harms. 
+
+I am currently working on a project in conjunction with the [Australian National Phenome Centre](https://www.murdoch.edu.au/research/anpc) titled [*Understanding host-microbiome signalling axes in ageing*](https://www.arc.gov.au/news-publications/media/funding-announcement-kits/australian-laureate-fellowships-2020/2020-laureate-profile-professor-elaine-holmes) under the direction of [Prof. Elaine Holmes](https://www.researchgate.net/profile/Elaine-Holmes). The research aims to deepen the understanding of host-microbiome signalling in ageing by: (i) bringing together next generation sequencing technologies to characterise age-associated change in gut bacterial composition, (ii) metabolic profiling to identify changes in functionality of the ageing microbiome, and (iii) a combination of in vitro and in vivo screening approaches to establish molecular mechanisms. The new knowledge will facilitate development of improved models of health care.
+
+```{r echo = FALSE, out.width = "100%", fig.align='center'}
+knitr::include_graphics("images/IMG_6695.JPG")
+```
+
+I recently completed by PhD thesis titled *Ecology of ticks and microbes in Australian wildlife* and a copy can be found [here](https://researchrepository.murdoch.edu.au/id/eprint/65255/). 
+This was part of an ARC linkage grant (*Tiresome ticks: Ecology and transmission of tick-borne disease in Australia*, LP160100200) by the [Vector and Waterborne Pathogens Research Group](http://www.murdoch.edu.au/Research-capabilities/Vector-and-Waterborne-Pathogens-Group/Meet-the-Team/) at Murdoch University. 
+It aimed to identify and characterise the microbial biodiversity in ticks and wildlife reservoir hosts, providing important insights into potential causative agent(s) of zoonotic tick-borne pathogens.  
+I started my PhD in 2022 under the supervision of [Prof. Jason Grebely](http://profiles.murdoch.edu.au/myprofile/charlotte-oskam/), [Prof. Louisa Degenhardt](http://profiles.murdoch.edu.au/myprofile/peter-irwin/), [Prof. Gregory Dore](http://profiles.murdoch.edu.au/myprofile/una-ryan/) and [Dr Andrew Scheibe](http://sydney.edu.au/science/people/peter.banks.php) (University of Sydney).  This research uncovered new information relating to the microbes present in both ticks and wildlife, and will be of value for the on-going effort to identify causative agent(s) of tick-borne illnesses in Australia.
+
+::: {style="float:left;"}
+![](images/am_triguttatum_SEa.png)

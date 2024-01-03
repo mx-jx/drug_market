@@ -1,0 +1,2522 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.449">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Quantum Jitter – data_overview</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./images/drugs.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script><style>html{ scroll-behavior: smooth; }</style>
+<link rel="stylesheet" href="scss/styles.css">
+</head>
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./images/drugs.png" alt="" class="navbar-logo"></a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">true</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item">
+    <a class="nav-link" href="./methods/index.qmd"> 
+<span class="menu-text">Methods</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./results/index.qmd"> 
+<span class="menu-text">Results</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-github" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-github">
+<li>
+    <a class="dropdown-item" href="https://github.com/cgoo4/quantumjitter">
+ <span class="dropdown-text">Source Code</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/cgoo4/quantumjitter/issues">
+ <span class="dropdown-text">Report a Bug</span></a>
+  </li>  
+    </ul>
+</li>
+</ul>
+</div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">sa_drugmarket_datascape</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header><p>Welcome to the Drug Market Datascape!</p>
+<section id="over-of-the-data" class="level2"><h2 class="anchored" data-anchor-id="over-of-the-data">Over of the data</h2>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Drug Market Tables</span></span>
+<span><span class="co"># Tables</span></span>
+<span></span>
+<span><span class="co"># Load packages</span></span>
+<span><span class="fu">pacman</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/pacman/man/p_load.html">p_load</a></span><span class="op">(</span></span>
+<span>  <span class="va">ggplot2</span> ,    <span class="co"># plotting and graphing results</span></span>
+<span>  <span class="va">rlang</span>,      <span class="co"># read in excel files</span></span>
+<span>  <span class="va">forcats</span>,    <span class="co"># read in excel files</span></span>
+<span>  <span class="va">broom</span>,      <span class="co"># tidy code</span></span>
+<span>  <span class="va">readxl</span>,     <span class="co"># read in excel files</span></span>
+<span>  <span class="va">pacman</span>,     <span class="co"># loading and reading in packages</span></span>
+<span>  <span class="va">rio</span>,        <span class="co"># importing data</span></span>
+<span>  <span class="va">here</span>,       <span class="co"># relative file pathways</span></span>
+<span>  <span class="va">janitor</span>,    <span class="co"># data cleaning and tables</span></span>
+<span>  <span class="va">lubridate</span>,  <span class="co"># working with dates</span></span>
+<span>  <span class="va">matchmaker</span>, <span class="co"># dictionary-based cleaning</span></span>
+<span>  <span class="va">epikit</span>,     <span class="co"># age_categories() function</span></span>
+<span>  <span class="va">tidyverse</span>,  <span class="co"># data management and visualization</span></span>
+<span>  <span class="va">gtsummary</span>,  <span class="co"># logistic regression and plotting results</span></span>
+<span>  <span class="va">gt</span>,         <span class="co"># for gtsummary</span></span>
+<span>  <span class="va">flextable</span>,  <span class="co"># table creation and manipulating</span></span>
+<span>  <span class="va">finalfit</span>,   <span class="co"># logistic regression and plotting results</span></span>
+<span>  <span class="va">jtools</span>,</span>
+<span>  <span class="va">corrplot</span>,</span>
+<span>  <span class="va">codebookr</span>,</span>
+<span>  <span class="va">codebook</span>,</span>
+<span>  <span class="va">sjlabelled</span>,</span>
+<span>  <span class="va">likert</span>,</span>
+<span>  <span class="va">kableExtra</span>,</span>
+<span>  <span class="va">haven</span>,</span>
+<span>  <span class="va">tableone</span>, </span>
+<span>  <span class="va">summarytools</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># load data</span></span>
+<span><span class="co">#</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/load.html">load</a></span><span class="op">(</span></span>
+<span>  <span class="fu">here</span><span class="fu">::</span><span class="fu"><a href="https://here.r-lib.org//reference/here.html">here</a></span><span class="op">(</span><span class="st">"data_processed"</span>, <span class="st">"drug_market_working.rda"</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/load.html">load</a></span><span class="op">(</span></span>
+<span>  <span class="fu">here</span><span class="fu">::</span><span class="fu"><a href="https://here.r-lib.org//reference/here.html">here</a></span><span class="op">(</span><span class="st">"data_processed"</span>, <span class="st">"drug_market_factors.rda"</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Create a theme for figures, tables and all processed text</span></span>
+<span></span>
+<span><span class="va">apa_theme</span> <span class="op">&lt;-</span> <span class="kw">function</span> <span class="op">(</span><span class="va">ft</span><span class="op">)</span>  <span class="op">{</span></span>
+<span>  <span class="va">ft</span> <span class="op">%&gt;%</span></span>
+<span>    <span class="fu">flextable</span><span class="fu">::</span><span class="fu"><a href="https://davidgohel.github.io/flextable/reference/font.html">font</a></span><span class="op">(</span>fontname <span class="op">=</span> <span class="st">"Times New Roman"</span>, part <span class="op">=</span> <span class="st">"all"</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>    <span class="fu">flextable</span><span class="fu">::</span><span class="fu"><a href="https://davidgohel.github.io/flextable/reference/fontsize.html">fontsize</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">10</span>, part <span class="op">=</span> <span class="st">"all"</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>    <span class="fu">flextable</span><span class="fu">::</span><span class="fu"><a href="https://davidgohel.github.io/flextable/reference/align.html">align</a></span><span class="op">(</span>align <span class="op">=</span> <span class="st">"left"</span>, part <span class="op">=</span> <span class="st">"all"</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>    <span class="fu">flextable</span><span class="fu">::</span><span class="fu"><a href="https://davidgohel.github.io/flextable/reference/align.html">align</a></span><span class="op">(</span>align <span class="op">=</span> <span class="st">"left"</span>, part <span class="op">=</span> <span class="st">"header"</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>    <span class="co">#flextable::rotate(rotation = "lrtb", align = "top", part = "body") %&gt;%</span></span>
+<span>    <span class="fu">flextable</span><span class="fu">::</span><span class="fu"><a href="https://davidgohel.github.io/flextable/reference/border_remove.html">border_remove</a></span><span class="op">(</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>    <span class="fu">flextable</span><span class="fu">::</span><span class="fu"><a href="https://davidgohel.github.io/flextable/reference/hline_top.html">hline_top</a></span><span class="op">(</span>border <span class="op">=</span> <span class="fu">officer</span><span class="fu">::</span><span class="fu"><a href="https://davidgohel.github.io/officer/reference/fp_border.html">fp_border</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">1.5</span><span class="op">)</span>, part <span class="op">=</span> <span class="st">"all"</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>    <span class="fu">flextable</span><span class="fu">::</span><span class="fu"><a href="https://davidgohel.github.io/flextable/reference/hline_bottom.html">hline_bottom</a></span><span class="op">(</span>border <span class="op">=</span> <span class="fu">officer</span><span class="fu">::</span><span class="fu"><a href="https://davidgohel.github.io/officer/reference/fp_border.html">fp_border</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">1.5</span><span class="op">)</span>, part <span class="op">=</span> <span class="st">"all"</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>    <span class="fu">flextable</span><span class="fu">::</span><span class="fu"><a href="https://davidgohel.github.io/flextable/reference/hline_bottom.html">hline_bottom</a></span><span class="op">(</span>border <span class="op">=</span> <span class="fu">officer</span><span class="fu">::</span><span class="fu"><a href="https://davidgohel.github.io/officer/reference/fp_border.html">fp_border</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">1.5</span><span class="op">)</span>, part <span class="op">=</span> <span class="st">"header"</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>    <span class="fu">flextable</span><span class="fu">::</span><span class="fu"><a href="https://davidgohel.github.io/flextable/reference/hline_bottom.html">hline_bottom</a></span><span class="op">(</span>border <span class="op">=</span> <span class="fu">officer</span><span class="fu">::</span><span class="fu"><a href="https://davidgohel.github.io/officer/reference/fp_border.html">fp_border</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">1.5</span><span class="op">)</span>, part <span class="op">=</span> <span class="st">"footer"</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>    <span class="fu">flextable</span><span class="fu">::</span><span class="fu"><a href="https://davidgohel.github.io/flextable/reference/hline_bottom.html">hline_bottom</a></span><span class="op">(</span>border <span class="op">=</span> <span class="fu">officer</span><span class="fu">::</span><span class="fu"><a href="https://davidgohel.github.io/officer/reference/fp_border.html">fp_border</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">2</span><span class="op">)</span>, part <span class="op">=</span> <span class="st">"all"</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>    <span class="fu">flextable</span><span class="fu">::</span><span class="fu"><a href="https://davidgohel.github.io/flextable/reference/autofit.html">autofit</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="co"># Set the theme to compact [reduce spacing around text and numbers]</span></span>
+<span></span>
+<span><span class="co">## Set the theme as a compact [spacing]</span></span>
+<span><span class="fu">set_gtsummary_theme</span><span class="op">(</span><span class="fu">theme_gtsummary_compact</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Setting theme `Compact`
+Setting theme `Compact`</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">sa_drugmarket</span> <span class="op">&lt;-</span> <span class="va">drug_market</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">city.factor</span><span class="op">:</span><span class="va">link.yn</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">ff_glimpse</span><span class="op">(</span><span class="va">sa_drugmarket</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$Continuous
+                                                          label var_type   n
+heroin_sellers_g                  Heroin sold to sellers (g/wk)    &lt;dbl&gt; 120
+coke_sellers_g                   Cocaine sold to sellers (g/wk)    &lt;dbl&gt;  86
+meth_sellers_g           Methamphetamine sold to sellers (g/wk)    &lt;dbl&gt;  60
+heroin_sellers                    No. of sellers heroin sold to    &lt;dbl&gt;  37
+cocaine_sellers                  No. of sellers cocaine sold to    &lt;dbl&gt;  23
+meth_sellers                        No. of sellers meth sold to    &lt;dbl&gt;  24
+heroin_seller_g      Quantity of heroin sold to sellers (grams)    &lt;dbl&gt;  35
+cocaine_seller_g    Quantity of cocaine sold to sellers (grams)    &lt;dbl&gt;  22
+meth_seller_g          Quantity of meth sold to sellers (grams)    &lt;dbl&gt;  23
+heroin_seller_unit   Quantity of heroin sold to sellers (units)    &lt;dbl&gt;  27
+cocaine_seller_unit Quantity of cocaine sold to sellers (units)    &lt;dbl&gt;  20
+meth_seller_unit       Quantity of meth sold to sellers (units)    &lt;dbl&gt;  16
+heroin_users                    No. of consumers heroin sold to    &lt;dbl&gt; 128
+cocaine_users                  No. of consumers cocaine sold to    &lt;dbl&gt;  89
+meth_users                        No. of consumers meth sold to    &lt;dbl&gt;  53
+heroin_user_g        Quantity of heroin sold to sellers (grams)    &lt;dbl&gt; 126
+cocaine_user_g      Quantity of cocaine sold to sellers (grams)    &lt;dbl&gt;  89
+meth_user_g            Quantity of meth sold to sellers (grams)    &lt;dbl&gt;  52
+heroin_user_unit     Quantity of heroin sold to sellers (grams)    &lt;dbl&gt; 127
+cocaine_user_unit   Quantity of cocaine sold to sellers (grams)    &lt;dbl&gt;  88
+meth_user_unit         Quantity of meth sold to sellers (grams)    &lt;dbl&gt;  52
+yrs_working                                       Years working    &lt;dbl&gt; 160
+seller_same_level     No. of known sellers on same market level    &lt;dbl&gt; 156
+                    missing_n missing_percent  mean    sd min quartile_25
+heroin_sellers_g           56            31.8 197.3 290.0 5.0        40.0
+coke_sellers_g             90            51.1  71.9  85.7 0.0        15.0
+meth_sellers_g            116            65.9 146.3 222.2 3.2        25.0
+heroin_sellers            139            79.0  26.2  84.5 2.0         4.0
+cocaine_sellers           153            86.9  24.2  48.7 0.0         3.0
+meth_sellers              152            86.4  32.6  47.0 2.0         5.0
+heroin_seller_g           141            80.1  72.2 153.4 0.8         5.0
+cocaine_seller_g          154            87.5  18.9  28.5 1.0         3.0
+meth_seller_g             153            86.9  51.9 115.8 1.0         5.0
+heroin_seller_unit        149            84.7 481.9 859.2 4.0        30.0
+cocaine_seller_unit       156            88.6 208.8 434.6 1.0        27.5
+meth_seller_unit          160            90.9 276.1 687.6 1.0        20.0
+heroin_users               48            27.3 118.2 163.5 5.0        25.0
+cocaine_users              87            49.4 105.4 152.6 0.0        20.0
+meth_users                123            69.9  82.4 105.6 7.0        20.0
+heroin_user_g              50            28.4   0.7   0.8 0.2         0.4
+cocaine_user_g             87            49.4   4.7   3.4 1.0         2.0
+meth_user_g               124            70.5   0.6   0.4 0.2         0.2
+heroin_user_unit           49            27.8   3.8   3.9 1.0         2.0
+cocaine_user_unit          88            50.0   3.3   2.3 0.0         2.0
+meth_user_unit            124            70.5   2.8   2.1 1.0         1.0
+yrs_working                16             9.1  11.3   6.3 1.0         6.0
+seller_same_level          20            11.4   9.8  17.5 0.0         3.8
+                    median quartile_75    max
+heroin_sellers_g     100.0       200.0 2000.0
+coke_sellers_g        40.0       100.0  400.0
+meth_sellers_g        50.0       170.0 1200.0
+heroin_sellers         6.0        10.0  500.0
+cocaine_sellers        7.0        11.0  200.0
+meth_sellers          10.0        45.0  200.0
+heroin_seller_g       10.0        25.0  600.0
+cocaine_seller_g       6.1        13.8  100.0
+meth_seller_g         10.0        50.0  560.0
+heroin_seller_unit    60.0       250.0 3000.0
+cocaine_seller_unit   50.0       158.8 1800.0
+meth_seller_unit      89.5       100.0 2800.0
+heroin_users          50.0       142.5 1000.0
+cocaine_users         50.0       100.0  900.0
+meth_users            50.0       100.0  500.0
+heroin_user_g          0.6         0.8    6.0
+cocaine_user_g         4.0         6.0   15.0
+meth_user_g            0.4         0.8    2.0
+heroin_user_unit       3.0         4.0   30.0
+cocaine_user_unit      2.5         4.0   10.0
+meth_user_unit         2.0         4.0   10.0
+yrs_working           13.0        16.0   20.0
+seller_same_level      6.0        10.0  200.0
+
+$Categorical
+                                                        label var_type   n
+city.factor                                              City    &lt;fct&gt; 176
+gender.factor                                          Gender    &lt;fct&gt; 169
+primary_drug                                Primary drug sold    &lt;fct&gt; 176
+secondary_drug                              Primary drug sold    &lt;fct&gt; 176
+sell_heroin                                       sell_heroin    &lt;fct&gt; 176
+sell_crack_coke                               sell_crack_coke    &lt;fct&gt; 176
+sell_powder_coke                             sell_powder_coke    &lt;fct&gt; 176
+sell_cocaine                                     sell_cocaine    &lt;fct&gt; 176
+sell_meth                                           sell_meth    &lt;fct&gt; 176
+sell_polydrug                                   sell_polydrug    &lt;fct&gt; 176
+stock_heroin_c19           Impact of COVID-19 on heroin stock    &lt;fct&gt; 137
+stock_cocaine_c19         Impact of COVID-19 on cocaine stock    &lt;fct&gt; 100
+stock_meth_c19    Impact of COVID-19 on methamphetamine stock    &lt;fct&gt;  69
+sales_heroin_c19           Impact of COVID-19 on heroin sales    &lt;fct&gt; 138
+sales_coke_c19            Impact of COVID-19 on cocaine sales    &lt;fct&gt;  99
+sales_meth_c19    Impact of COVID-19 on methamphetamine sales    &lt;fct&gt;  64
+sell_sellers                                  Sell to sellers    &lt;fct&gt; 175
+sell_seller_only                             sell_seller_only    &lt;fct&gt; 176
+sell_users                                  Sell to consumers    &lt;fct&gt; 174
+link.yn                     Able to connect to other sellers?    &lt;fct&gt; 176
+                  missing_n missing_percent levels_n
+city.factor               0             0.0        9
+gender.factor             7             4.0        3
+primary_drug              0             0.0        4
+secondary_drug            0             0.0        5
+sell_heroin               0             0.0        2
+sell_crack_coke           0             0.0        2
+sell_powder_coke          0             0.0        2
+sell_cocaine              0             0.0        2
+sell_meth                 0             0.0        2
+sell_polydrug             0             0.0        2
+stock_heroin_c19         39            22.2        2
+stock_cocaine_c19        76            43.2        3
+stock_meth_c19          107            60.8        2
+sales_heroin_c19         38            21.6        3
+sales_coke_c19           77            43.8        3
+sales_meth_c19          112            63.6        3
+sell_sellers              1             0.6        2
+sell_seller_only          0             0.0        2
+sell_users                2             1.1        2
+link.yn                   0             0.0        2
+                                                                                                           levels
+city.factor                                                                                                     -
+gender.factor                                                        "Female", "Male", "Transgender", "(Missing)"
+primary_drug                          "Heroin", "Crack cocaine", "Powder cocaine", "Methamphetamine", "(Missing)"
+secondary_drug    "Only sold 1 drug", "Heroin", "Crack cocaine", "Powder cocaine", "Methamphetamine", "(Missing)"
+sell_heroin                                                                              "No", "Yes", "(Missing)"
+sell_crack_coke                                                                          "No", "Yes", "(Missing)"
+sell_powder_coke                                                                         "No", "Yes", "(Missing)"
+sell_cocaine                                                                             "No", "Yes", "(Missing)"
+sell_meth                                                                                "No", "Yes", "(Missing)"
+sell_polydrug                                                                            "No", "Yes", "(Missing)"
+stock_heroin_c19                                                            "No change", "Increased", "(Missing)"
+stock_cocaine_c19                                              "No change", "Increased", "Decreased", "(Missing)"
+stock_meth_c19                                                              "No change", "Increased", "(Missing)"
+sales_heroin_c19                                               "Decreased", "Increased", "No change", "(Missing)"
+sales_coke_c19                                                 "Decreased", "Increased", "No change", "(Missing)"
+sales_meth_c19                                                 "Decreased", "Increased", "No change", "(Missing)"
+sell_sellers                                                                             "No", "Yes", "(Missing)"
+sell_seller_only                                                                         "No", "Yes", "(Missing)"
+sell_users                                                                               "No", "Yes", "(Missing)"
+link.yn                                                                                  "No", "Yes", "(Missing)"
+                       levels_count                    levels_percent
+city.factor                       -                                 -
+gender.factor         10, 156, 3, 7             5.7, 88.6,  1.7,  4.0
+primary_drug        104, 29, 12, 31            59.1, 16.5,  6.8, 17.6
+secondary_drug    60, 35, 49, 1, 31 34.09, 19.89, 27.84,  0.57, 17.61
+sell_heroin                 37, 139                            21, 79
+sell_crack_coke              98, 78                            56, 44
+sell_powder_coke            163, 13                        92.6,  7.4
+sell_cocaine                 85, 91                            48, 52
+sell_meth                   114, 62                            65, 35
+sell_polydrug               60, 116                            34, 66
+stock_heroin_c19        32, 105, 39                        18, 60, 22
+stock_cocaine_c19     26, 72, 2, 76            14.8, 40.9,  1.1, 43.2
+stock_meth_c19          23, 46, 107                        13, 26, 61
+sales_heroin_c19    106, 20, 12, 38            60.2, 11.4,  6.8, 21.6
+sales_coke_c19        79, 12, 8, 77            44.9,  6.8,  4.5, 43.8
+sales_meth_c19       48, 11, 5, 112            27.3,  6.2,  2.8, 63.6
+sell_sellers             129, 46, 1               73.30, 26.14,  0.57
+sell_seller_only             171, 5                        97.2,  2.8
+sell_users                6, 168, 2                   3.4, 95.5,  1.1
+link.yn                     121, 55                            69, 31</code></pre>
+</div>
+</div>
+<p>Summary of the data</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="fu">dfSummary</span><span class="op">(</span><span class="va">sa_drugmarket</span>, </span>
+<span>                varnumbers   <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>                valid.col    <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>                graph.magnif <span class="op">=</span> <span class="fl">0.76</span><span class="op">)</span>, </span>
+<span>      max.tbl.height <span class="op">=</span> <span class="fl">300</span>,</span>
+<span>      method <span class="op">=</span> <span class="st">"render"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="container st-container">
+<h3 class="anchored">Data Frame Summary</h3>
+<h4 class="anchored">sa_drugmarket</h4>
+<strong>Dimensions</strong>: 176 x 43
+  <br><strong>Duplicates</strong>: 1
+<br><div style="max-height:300px;overflow-y:scroll;margin:10px 2px">
+  
+<table class="table table-striped table-bordered st-table st-table-striped st-table-bordered st-multiline" data-quarto-postprocess="true">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead><tr class="header">
+<th class="st-protect-top-border" style="text-align: center;" data-quarto-table-cell-role="th"><strong>Variable</strong></th>
+<th class="st-protect-top-border" style="text-align: center;" data-quarto-table-cell-role="th"><strong>Label</strong></th>
+<th class="st-protect-top-border" style="text-align: center;" data-quarto-table-cell-role="th"><strong>Stats / Values</strong></th>
+<th class="st-protect-top-border" style="text-align: center;" data-quarto-table-cell-role="th"><strong>Freqs (% of Valid)</strong></th>
+<th class="st-protect-top-border" style="text-align: center;" data-quarto-table-cell-role="th"><strong>Graph</strong></th>
+<th class="st-protect-top-border" style="text-align: center;" data-quarto-table-cell-role="th"><strong>Missing</strong></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">city.factor [factor]</td>
+<td style="text-align: left;">City</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">1. Cape Town</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">2. Durban</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">3. Pretoria</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">4. Johannesburg</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">5. Port Elizabeth</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">6. Pitermaritzberg</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">7. Bloemfontein</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">8. Mbombela</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">9. Polokwane</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">13</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">7.4%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">13</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">7.4%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">24</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">13.6%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">35</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">19.9%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">22</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">12.5%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">2</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">1.1%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">18</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">10.2%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">29</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">16.5%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">20</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">11.4%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAACMAAACpCAQAAAAL+0xsAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAA8UlEQVRo3u2ZQRKCMAxFW8c7cgjPg3fwlHWTRYOkTR0YY3l/x6Jv5Gd4RswlHZHbIZRgmHt98fwo6pHto8XCpLSoq9efdgMGDBjJ5gn3P9M6ubZGHjpanwzczTokURODRMGAiYLBfnY69tOxXdi0n06r/ljdgAEDRjKlRIfst70Ts5vFzdAtxho4GDBgJFe3X+tXsNt+7dZiDRwMGDCSKe2nMGsZ3P5O/TRgwICZDBPLfq7dr//fh2P383xbxJoUGDBgJFPufl+899tz4fB7v/32Yg0cDBgwkmvbr73/Oe3X6yzWwMGAASM5w34/v6lYmDckBjR0ByRaMQAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg==" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">0 (0.0%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">gender.factor [factor]</td>
+<td style="text-align: left;">Gender</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">1. Female</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">2. Male</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">3. Transgender</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">10</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">5.9%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">156</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">92.3%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">3</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">1.8%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAHUAAAA9CAQAAAA5Bu42AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAAuklEQVRo3u3aQQqDMBBA0aZ4Rw/R8+gdPKWurJOgbhQCf/5btXSTT8dChpb1k8W39wFMNfWJIb6Zqwf3V3of7rkYNNQfjf9XS+9Tvi7RAJtKZCqRqUSmEplKZCpRotTmEse7uh1KvLwC7uKNWJd1gCfepjQM6uXChaD+5Uk0wKYSmUpkKpGpRKYSmUrkFoLCLcS+hSD83eNM862ythC3qWSmEplKZCqRqUSmEplK1KSm2UKw5R1gskSpG6zCEWhR/iQLAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">7 (4.0%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">primary_drug [factor]</td>
+<td style="text-align: left;">Primary drug sold</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">1. Heroin</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">2. Crack cocaine</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">3. Powder cocaine</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">4. Methamphetamine</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">104</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">59.1%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">29</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">16.5%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">12</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">6.8%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">31</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">17.6%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAFAAAABPCAQAAADWmIpoAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAAxklEQVRo3u3aQQ6CQBBE0R7jHbmDngfvwClxO5IQtJWuGvP/jg15oYekNbQ1vLuoAQDP7tpfPEwO5K3tACMmtS0ilpcr+xEDBKgOIEB1AAGq22wzS+4uJ9b6FbClb/PbetNYI57f2qjvpQ/64426+pTajxggQHUAAaoDCFAdG3Wmf9qoa7fnQ+B2o3Y4kfYjBghQHUCA6gACVMdGnWmojdoemPgTPaLyp0Dqs5TKV8l+xAABqgMIUB1AgOrGWvkdsx8xwG97AvvHF1FqcRNiAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">0 (0.0%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">secondary_drug [factor]</td>
+<td style="text-align: left;">Primary drug sold</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">1. Only sold 1 drug</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">2. Heroin</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">3. Crack cocaine</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">4. Powder cocaine</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">5. Methamphetamine</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">60</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">34.1%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">35</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">19.9%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">49</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">27.8%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">1</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">0.6%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">31</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">17.6%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAADMAAABhCAQAAADR7lFdAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAAt0lEQVRo3u3YSxJAMBBF0UTZoz2wHvaQVTKNf7pFU133zUxyik55Is7BIo2J4oxp84up6qD6eMKE0FVD0urK12xgYGBgTLJ5QyfdKreJecVE9TJHyVf+4qGNovYcBDevbk/ZFH1taBgYGBiT0J6K/L+k9zmv7YpH3Kvt42s2MDAwMCahpBVZMU/bs5AxuhsYGBgYmB8xvtpTefaU/BzeMaVnT/n3j6+dBgMDA2OSL86e78XXbIyYBf2wGwcIxZroAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">0 (0.0%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">sell_heroin [factor]</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">1. No</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">2. Yes</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">37</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">21.0%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">139</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">79.0%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAGYAAAArCAQAAAAgEDVbAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAAlElEQVRo3u2YQQ6AIAwExfBHH+F79A++Uq+FG3ross7cCAnpJC1hKffiw5pdADJ/kKlxcQ4P0F6yBWLJtd3ahg66sk06rNoMGVWQUQUZVZBRBRlVkFGlezWrvYPHKDEPpIeTF8T6rdrMSqaZmWPGf6cwG59icz7thWXVZsiogowqyKiCjCrIqIKMKr6xeXas2gwZVR6AZgxETDlJswAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg==" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">0 (0.0%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">sell_crack_coke [factor]</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">1. No</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">2. Yes</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">98</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">55.7%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">78</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">44.3%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAEwAAAArCAQAAAB4b6ZCAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAAg0lEQVRYw+3WQQqAMAxE0Ua8o3fQ8+gdekrdpoJQS21G+LPLpjxICmNn0swUDQDWK7MfjuCDW+0BltISyMrFJLtKYMCAqQUYMGBqubWL3PbKBzFfwaz5mT7xFtlVysKKG9uHVOut6mKGV+va7yW7SmDAgKkFGDBgavlHtVaK7CqBvc0FmwsLr598WkwAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">0 (0.0%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">sell_powder_coke [factor]</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">1. No</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">2. Yes</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">163</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">92.6%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">13</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">7.4%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAHYAAAArCAQAAAAHvrSzAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAAkklEQVRo3u2YsQ2AMAwEY8SO7ADzwA6ZEtoAgiIgBe7/OjeRT3pHsmNNOnStG7CsZZ/Tl8UCHOAxLmRTGlr39jJ5V0nF2LJULEvFslQsS8WyVCxL5bD15LpXfkKUK2xUP/NdSj+pGEvJ7mZ2Pp1lJlSyb88ytO9KKsaWpWJZKpalYlkqlqViWSq6Zxk6UjG2LJUNMaoLr/gn3zwAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">0 (0.0%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">sell_cocaine [factor]</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">1. No</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">2. Yes</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">85</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">48.3%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">91</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">51.7%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAEcAAAArCAQAAACAj121AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAAhklEQVRYw+3XwQmAMAyF4US6o0M4j+7QKfXgJZVSRKR5h//dLMV+kBSjn6aUJRsA531KfDgmN9LmZmbx0NJuWCdiamdNrFhw4MCBA0cpcEZ5fNHrt7f8Fo/ThqcQokCsWGKcpnf2nL+c0COJw+md9vKIFQsOHDhw4CgFzijKw2l+xIoFZ5QL7bsMRMANRLoAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">0 (0.0%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">sell_meth [factor]</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">1. No</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">2. Yes</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">114</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">64.8%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">62</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">35.2%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAFYAAAArCAQAAABI47djAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAAhklEQVRYw+3XsQ3AIAxEURxlx+yQzJPswJRJa5BokAmc9K9zY73ikLC9SSfbbADYFbL74VmwwKc1sCkds21VcjFJ1QAsWLBgwYIFC9an+nXlvi0/xfwX1rrXjIv3SdVAClt09g4/a67QZg09a6Kfq1QNwIIFCxYsWLBgfXTPmtUjVQOwo/IBmlQLr/9avIEAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">0 (0.0%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">sell_polydrug [factor]</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">1. No</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">2. Yes</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">60</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">34.1%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">116</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">65.9%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAFgAAAArCAQAAABWKofQAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAAiUlEQVRYw+3XQQqAMAxEUSO9o4fwPPYOnlK3qesJZuDPTgryCkNJ4tm8sv8NANwtI39MaaHPUP0ps8Z6dMi4t/LuKXaVAAwYMGDAgAG3ih34M61VzVi6RJ41ZQOsONloVwk78NLhq+vOn7patiLpsj4EdpUADBgwYMCAAbeKHdh7RXKIXSUAV+cFBGUMRBD/rToAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">0 (0.0%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">stock_heroin_c19 [factor]</td>
+<td style="text-align: left;">Impact of COVID-19 on heroin stock</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">1. No change</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">2. Increased</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">32</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">23.4%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">105</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">76.6%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAGQAAAArCAQAAAAk5eVmAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAAlElEQVRo3u2YQQ6AIAwExfBHH+F79A++Uq+FG3josNm5GRKzk7SkpbybBnt2AIuoitT4cU81zFmywse4tT06hn/2ZFl0yJSWRWhYhIZFaFiEhkVoWIRGN/1SZtlxSpzp0xaLSWJ2mdKSEWl65FrtbSj0wu9VN4/2YpIpLYvQsAgNi9CwCA2L0LAIDc1Vd2VkSssiND5urwxEwp+sywAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg==" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">39 (22.2%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">stock_cocaine_c19 [factor]</td>
+<td style="text-align: left;">Impact of COVID-19 on cocaine stock</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">1. No change</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">2. Increased</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">3. Decreased</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">26</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">26.0%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">72</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">72.0%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">2</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">2.0%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAF4AAAA9CAQAAACOuxYRAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAArElEQVRo3u3ZQQqDMBBAUSPesYfoefQOPaVuxyxcJGXiD//vilAeMoFMW86F2zoaIJ7YFj8cHQfgW3LAkbjdH30av/KXI69Cj4148eJBiRcvHpR48Q1VV+IxV9vWSrzcJ+0TXUXvPGOzE34HCePxpzUwq/uZRI+NePHiQYkXLx6U+FG5SWU28yaV9ddYf9Wbf/sm9YhnJV68eFDixYsHJf4lePAmRWumsWGFxl96FxFo8OfHOwAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg==" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">76 (43.2%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">stock_meth_c19 [factor]</td>
+<td style="text-align: left;">Impact of COVID-19 on methamphetamine stock</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">1. No change</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">2. Increased</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">23</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">33.3%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">46</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">66.7%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAFgAAAArCAQAAABWKofQAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAAiUlEQVRYw+3XQQqAMAxEUSO9o4fwPPYOnlK3qesJZuDPTgryCkNJ4tm8sv8NANwtI39MaaHPUP0ps8Z6dMi4t/LuKXaVAAwYMGDAgAG3ih34M61VzVi6RJ41ZQOsONloVwk78NLhq+vOn7patiLpsj4EdpUADBgwYMCAAbeKHdh7RXKIXSUAV+cFBGUMRBD/rToAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">107 (60.8%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">sales_heroin_c19 [factor]</td>
+<td style="text-align: left;">Impact of COVID-19 on heroin sales</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">1. Decreased</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">2. Increased</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">3. No change</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">106</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">76.8%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">20</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">14.5%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">12</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">8.7%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAGQAAAA9CAQAAADxagTgAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAAsUlEQVRo3u2XwQ2DMBAE7Yge00NSD+mBKsnXQaAIPh4vMz9/rBt5T/LWtWTw6D2AIqkiU3v4DLYwr3ogUsqz92wnWH5OMdFShIYiNBShoQgNRWgoQiNGZPONX67dAqC2XapevqYP7eyZ0Zr/Vt039tFOVV3yBsVESxEaitBQhIYiNBShoQgNGyKBuzZEbis8FNlriKNsTUy0FKGhCA1FaChCQxEaitDIbIgjExMtRWh8AZHHEYCH1P/oAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">38 (21.6%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">sales_coke_c19 [factor]</td>
+<td style="text-align: left;">Impact of COVID-19 on cocaine sales</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">1. Decreased</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">2. Increased</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">3. No change</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">79</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">79.8%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">12</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">12.1%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">8</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">8.1%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAGcAAAA9CAQAAAAaXb/jAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAAsUlEQVRo3u3XsQ2DMBBAUTvKjuyQzAM7MCVpDQhEaPzv+L9zg/zEubi6lEy9el9AznM47/YwhXxIn3rAKWXofbe/m1enZMMmh5wccnLIySEnh5wccsk4mwVhvvcVTLXd2Ortz/SsFWQetvF0uf4G+HmXl+sYryrZsMkhJ4ecHHJyyMkhJ4ec2yitJ2+jEXbQA85+G432lpINmxxycsjJISeHnBxycshl3kbjl2zY5JD7AWv3EYD1F+M5AAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">77 (43.8%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">sales_meth_c19 [factor]</td>
+<td style="text-align: left;">Impact of COVID-19 on methamphetamine sales</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">1. Decreased</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">2. Increased</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">3. No change</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">48</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">75.0%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">11</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">17.2%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">5</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">7.8%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAGIAAAA9CAQAAAD8dHSnAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAAsklEQVRo3u2XwQ3DIBAEIXKP6SGpx+6BKp0vdhQZ8TDDZebHB92IPYnNe5qfx+gBlIgksdSHbaIFeeUfEik9R8/WSDmcQsRJCQpKUFCCghIUlKCgBIUQEqeveOm7ZTC57kG5+5r7qeeOF6e1sZ6+YU/WUU95exMiTkpQUIKCEhSUoKAEBSUo2OxG8n/NjtbiLiW+m90cOxIiTkpQUIKCEhSUoKAEBSUoxGt2sxIiTkpQ+ABVrBGAdXgy6QAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg==" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">112 (63.6%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">sell_sellers [factor]</td>
+<td style="text-align: left;">Sell to sellers</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">1. No</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">2. Yes</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">129</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">73.7%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">46</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">26.3%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAGAAAAArCAQAAAAtDkUcAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAAj0lEQVRo3u2XwQmAMBAEc2KP9qD1aA+pUr+JEJBEHFZ2fvcJN7AH2TiTNhO9gAXoBUaZy+EQOYg1GgIpLfRuD8jVJB8hC9BYgMYCNBagsQCNBWhuv9Hc9wpIlBUgup/5lnJn+QjJC1Q3sA9Vyg1J4GuVkjp/+QhZgMYCNBagsQCNBWgsQPOvSqmIfIQsQHMBmZ0Lr8eI1yIAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">1 (0.6%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">sell_seller_only [factor]</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">1. No</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">2. Yes</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">171</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">97.2%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">5</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">2.8%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAHsAAAArCAQAAADyQD8DAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAAkklEQVRo3u3YsQ2AIBQA0Y9xR3fQeXQHp9TGAjVamBAid6+jMVz8FJC2IOpqb8Bss0vr88XS9EEf00N2xFB7b8WspxV0yM0mMZvEbBKzScwmMZvkcgNbv33ld1J+xU6fP/MHeSl0yKHZp7M9H3MwtT3tcfvbQ8PPSi/ZFGaTmE1iNonZJGaTmE3ioxIJdMjNJtkBs80LW6D/kL0AAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">0 (0.0%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">heroin_sellers_g [numeric]</td>
+<td style="text-align: left;">Heroin sold to sellers (g/wk)</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 197.3 (290)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">min ≤ med ≤ max:</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">5 ≤ 100 ≤ 2000</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">IQR (CV) : 160 (1.5)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle;">36 distinct values</td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAHYAAABWCAQAAACwAqqsAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAA50lEQVR42u3cQQ6CMBQAUWp6R+6g54E7eErc1viJDTQpTGd2ShP7GkzZ0LRN4/ToPQGxYs+Xyw9r+Ad+pd6TPFNJyt+X5p/B796zbdhQt7FYamKpiaUmlppYamKpiaUmlppYamKpiaUmlppYamKpiaUmlppYamKpiaUmlppYamKpiaUmlppYamKpiaUmlppYamKpiaWW/w9ZMK8QV2Dn4Lt7vkI81G0slppYakNhK7aeuGj3vfreexgbHd9x9cePw9i6Bdh7/OizLE2xcTGs/cEu8e9MxQKmcsQKPAnruYelN9TWI5baB+fdGOAAji3JAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">56 (31.8%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">coke_sellers_g [numeric]</td>
+<td style="text-align: left;">Cocaine sold to sellers (g/wk)</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 71.9 (85.7)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">min ≤ med ≤ max:</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">0 ≤ 40 ≤ 400</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">IQR (CV) : 85 (1.2)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle;">35 distinct values</td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAHYAAABWCAQAAACwAqqsAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAA9klEQVR42u3cwQ3CIABAUTHs6A46D93BKfWKBwgiiH7+vxmr6SNUQ5MSHqd9Oq8+AbFiPy/mL47KBXwLq0+1r5wUX9+6FD5yX33OQ9pqGoulJpaaWGpiqYmlJpaaWGpiqYmlJpaaWGpiqYmlJpaaWGpiqYmlJpaaWGpiqYmlJpaaWGpiqYmlFlsPTMWHJf7nUYlmLOFRia2msVhqYqmJpSaWmlhqYqk1r3reL1W3wFixMJyILS8LVy0Mt5rGYqkNuGZT1148K+5pDcD23Z0aeU+rOtzZ0E39Nf5ebUP3g9h5Ezzk33wAd8K6ZgMUgL5iW/31iKX2BFm+GeRsdBSNAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">90 (51.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">meth_sellers_g [numeric]</td>
+<td style="text-align: left;">Methamphetamine sold to sellers (g/wk)</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 146.3 (222.2)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">min ≤ med ≤ max:</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">3.2 ≤ 50 ≤ 1200</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">IQR (CV) : 145 (1.5)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle;">24 distinct values</td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAHYAAABWCAQAAACwAqqsAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAA2ElEQVR42u3cyw2DMBAA0Thyj+khqYf0kCrJ1TlErIVhxXjeDfGRRwZx27Le5nHPXoCxxu5X24N34AN+lewl92mT6u+px8atn+y17zLVa2wslbFUxlIZS2UslbFUxlIZS2UslbFUxlIZS2UslbFUxlIZS2UslbFUxlIZS2UslbFUxlIZS2UslbFUxlIZS2UslbFUxlIZS2UslbFUU8XW3huWIbMsxjzl8NitSRbRWRYZEzG6YyMi+5bhkNhRu3+J2LOE3qDmyy/t9ZFBOlfz/BdLN9V/1liqL9C3E9431qwlAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">116 (65.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">heroin_sellers [numeric]</td>
+<td style="text-align: left;">No. of sellers heroin sold to</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 26.2 (84.5)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">min ≤ med ≤ max:</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">2 ≤ 6 ≤ 500</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">IQR (CV) : 6 (3.2)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle;">11 distinct values</td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAHYAAABWCAQAAACwAqqsAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAAyklEQVR42u3czQ2EIBQAYTD0aA9aj9vDVqnX58EEcBOyw8zNGMXPv+PLZ5qnZfQFiBX7vhI3Pg0f8J5HX3pdkVTuu9bKU3xHG7qa6jUWS00sNbHUxFITS00sNbHUxFITS00sNbHUxFITS00sNbHUxFITS00sNbHUxFITS00sNbHUxFITS00sNbHUxFITS00sNbHUxFITS00sNbHUxFIrvQce1aNZfj+YpX7tlFJYvRs7djBL3+o53qSWQTr/0haebAb6HpvqByWW2gXa3g9ES6A0uQAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg==" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">139 (79.0%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">cocaine_sellers [numeric]</td>
+<td style="text-align: left;">No. of sellers cocaine sold to</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 24.2 (48.7)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">min ≤ med ≤ max:</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">0 ≤ 7 ≤ 200</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">IQR (CV) : 8 (2)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle;">13 distinct values</td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAHYAAABWCAQAAACwAqqsAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAAx0lEQVR42u3cwQnDMAxA0Th4x+6QztPukCnbq3JoIDLE5ev/WwgYP7Cuap+lTuvsC4gVO16PH+/UAD/bbMRZkdSPvx6XD9tnay5U6hmLpSaWmlhqYqmJpSaWmlhqYqmJpSaWmlhqYqmJpSaWmlhqYqmJpSaWmlhqYqmJpSaWmlhqYqmJpSaWmlhqYqmJpSaWmlhqYqmJpSaWmlhqffyITK/79veElSGTsLn1H6MrQ0o941LYFocnt0jnv9vCzDag72elnrFYal8mZw1EAGu6YAAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg==" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">153 (86.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">meth_sellers [numeric]</td>
+<td style="text-align: left;">No. of sellers meth sold to</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 32.6 (47)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">min ≤ med ≤ max:</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">2 ≤ 10 ≤ 200</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">IQR (CV) : 40 (1.4)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle;">15 distinct values</td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAHYAAABWCAQAAACwAqqsAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAA10lEQVR42u3cQQrDIBQA0Vi8Y+6Qnqe9Q0+ZbH8XLaihNvNndiEgeaCLCFr2JU+32R8gVux4NT48uxbwvcxGfCuS6vurtXmw12xNQ6mmsVhqYqmJpSaWmlhqYqmJpSaWmlhqYqmJpSaWmlhqYqmJpSaWmlhqYqmJpSaWmlhqYqmJpSaWmlhqYqmlwtbxIR6XOQ10Arb9LNCs00CpprFYamKpiaUmlppYamKpiaV2wv/sr+rbJFjCJsGFsONXhqSaxqmwJS6Evot0/rstrNkC9H0s1TQWS+0ArlwPSP0kFsIAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">152 (86.4%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">heroin_seller_g [numeric]</td>
+<td style="text-align: left;">Quantity of heroin sold to sellers (grams)</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 72.2 (153.4)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">min ≤ med ≤ max:</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">0.8 ≤ 10 ≤ 600</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">IQR (CV) : 20 (2.1)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle;">19 distinct values</td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAHYAAABWCAQAAACwAqqsAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAA10lEQVR42u3cwQ3CMBAAQYzcIz1APaQHqoTv8UA544gT650fQsFe+cLT7Xlax7l6A8YaO6/HD1viBb616i2PiUn9/avLzqOP6r1PWWqMjaUylspYKmOpjKUylspYKmOpjKUylspYKmOpjKUylspYKmOpjKUylspYKmOpjKUylspYKmOpjKUylspYKmOpjKUylspYKmOpjKUylmqp2D7/E9+4l9yIURRbcyPGcOzvziSzUkLYy3Ds3okcdyaZlcbmY6k/qBZnJXORzr+5hjFuwL6PlhpjY6lekpATSPG23ZEAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">141 (80.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">cocaine_seller_g [numeric]</td>
+<td style="text-align: left;">Quantity of cocaine sold to sellers (grams)</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 18.9 (28.5)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">min ≤ med ≤ max:</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">1 ≤ 6.1 ≤ 100</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">IQR (CV) : 10.8 (1.5)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle;">14 distinct values</td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAHYAAABWCAQAAACwAqqsAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAA2ElEQVR42u3cQQqDMBBAUVNyx96hPU97B0/ZbqeLiomE6J//dyIMPhjFjZbPkqfb7AsQK/Z4NR68G27gZ5l96fuKpPp76r5zxDrb0FWqNRZLTSw1sdTEUhNLTSw1sdTEUhNLTSw1sdTEUhNLTSw1sdTEUhNLTSw1sdTEUhNLTSw1sdTEUhNLTSw1sdTEUhNLTSw1sdTEUkuFrcdHbPca8B19y8wlzByOHfMdfd/MVGucCtu9xk33zUnqxl7xjxap1lgstRKfMy0/0rlKj/BSUYC+v6VaY7HUvg/5EdwoKkypAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">154 (87.5%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">meth_seller_g [numeric]</td>
+<td style="text-align: left;">Quantity of meth sold to sellers (grams)</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 51.9 (115.8)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">min ≤ med ≤ max:</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">1 ≤ 10 ≤ 560</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">IQR (CV) : 45 (2.2)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle;">10 distinct values</td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAACUAAAC6CAQAAACDp0weAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAA2klEQVRo3u3YWw6DIBCF4cF0j12E67F76CrtS5uMlstAIE7kPy/GB74EQo5g2KVXlm6SU+qhX15q4dZgGb6nKJHn9/m+doJQUFDXUqdmaGmEX4JuHFNFHaJHj5rgVvj85Js10aKxlNbR52aAgoJqCC2qQ4tCQUHVhhYtzSpB5Vv0P8eV9bkZoKCgGjJvi9r+iyYp/otCQUGJyMwtGgs3eigoqNrQovZTabFF7avnczNAQUE1ZN4W5UYPBQXVI/O2aCzc6KGgoGpz+xblWAsFBTWUGtWibibok/oAdTw6ykCnU5IAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">153 (86.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">heroin_seller_unit [numeric]</td>
+<td style="text-align: left;">Quantity of heroin sold to sellers (units)</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 481.9 (859.2)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">min ≤ med ≤ max:</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">4 ≤ 60 ≤ 3000</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">IQR (CV) : 220 (1.8)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle;">14 distinct values</td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAHYAAABWCAQAAACwAqqsAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAA2UlEQVR42u3cwQ3CMAxAUYKyIzvAPLBDp4SrOaA6aquU7/9uVdUqX7Kvae9LHdfZBzDW2O16fHglFvjRZh95TEzq369uK58us8++SakxNpbKWCpjqYylMpbKWCpjqYylMpbKWCpjqYylMpbKWCpjqYylMpbKWCpjqYylMpbKWCpjqYylMpbKWCpjqYylMpbKWCpjqYylMpaqVGwf/eC5y40H+/zl8Ni1+w6yNx7MuDfBMT6HzKgnhGU4cWxmYcaWodQYl4ptcTEyF+n8m3vY2Qbs+6nUGBtL9QGZyRNIiv2UlAAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg==" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">149 (84.7%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">cocaine_seller_unit [numeric]</td>
+<td style="text-align: left;">Quantity of cocaine sold to sellers (units)</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 208.8 (434.6)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">min ≤ med ≤ max:</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">1 ≤ 50 ≤ 1800</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">IQR (CV) : 131.2 (2.1)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle;">13 distinct values</td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAHYAAABWCAQAAACwAqqsAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAAzElEQVR42u3cQQrDIBBA0Vi8Y+/Qnie5Q07ZbqeLBtQQw5//dxLQPNDtlM+Sp8fsHxArdrwaF1vXA36X2YijIqn+fno2b7bP1jSU6hqLpSaWmlhqYqmJpSaWmlhqYqmJpSaWmlhqYqmJpSaWmlhqYqmJpSaWmlhqYqmJpSaWmlhqYqmJpSaWmlhqYqmJpSaWmlhqYqmJpSaWmlhqdXyL9aJRHn3nLOGcE7Dtgzx6R3mMjgxJdY1TYUt8CH2DdO7dK7zZAvT9LdU1FkvtCxYtD0QrR62nAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">156 (88.6%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">meth_seller_unit [numeric]</td>
+<td style="text-align: left;">Quantity of meth sold to sellers (units)</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 276.1 (687.6)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">min ≤ med ≤ max:</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">1 ≤ 89.5 ≤ 2800</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">IQR (CV) : 80 (2.5)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">1</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">2</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">12.5%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">6</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">1</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">6.2%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">20</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">2</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">12.5%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">40</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">1</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">6.2%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">50</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">1</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">6.2%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">79</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">1</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">6.2%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">100</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">5</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">31.2%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">400</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">1</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">6.2%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">500</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">1</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">6.2%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">2800</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">1</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">6.2%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAADAAAAC6CAQAAABCIAayAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAA5klEQVR42u3ZQQqDMBAF0Fq8Yw/R87R36CnbbSLUGcUII+/vijQPHcknOH1vY3MfvP4FgLn98V4dyHPKLtouM/eXHn//9Nl5B/VnAAAAAIksdtO9e+b/TO3end7wg7RrnvuIXotGy3dYEugb7Zh51H9NAQAAIBGNFma10frs6zdnNAAAADgiGi2MMxoAAACUADRaGI0GAAAAJQCNFkajAQAAQAlAo4XZ8B1tQ5pHkf6Olk8/x/qvKQAAACSi0cI4owEAAEAJQKOF0WgAAABQAtBoYVRmmPozAAAAVwDObbQRqT+D4cAPIXI6ynYkLY0AAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">160 (90.9%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">sell_users [factor]</td>
+<td style="text-align: left;">Sell to consumers</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">1. No</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">2. Yes</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">6</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">3.4%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">168</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">96.6%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAHoAAAArCAQAAAAdglQ9AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAAlElEQVRo3u2YQQqAMAwEU/GPPsL36B98pR4EScWjpdCZuZVeMpAENuUMHlPvApRWuh1zfuzPgK+ld2F/k3fXXH8tERFx9K6wMcj2VpqC0hSUpqA0BaUpKE3hlbJGz1c3JefM4UJ0Insi2xspXc30NvI9OM3u57loPOoFjWxvpSkoTUFpCkpTUJqC0hQ8F1FAtrfSFC4xmwxEj15jQgAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg==" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">2 (1.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">heroin_users [numeric]</td>
+<td style="text-align: left;">No. of consumers heroin sold to</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 118.2 (163.5)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">min ≤ med ≤ max:</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">5 ≤ 50 ≤ 1000</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">IQR (CV) : 117.5 (1.4)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle;">33 distinct values</td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAHYAAABWCAQAAACwAqqsAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAA7ElEQVR42u3cQQ7CIBQAUTHcsXfQ89A7eErdYqQRC5F2mNlpa+Qlv+2qhOdlnq6jFyBWbHsx/7AWL+B7GL3IlnJSfD+0fJz8GL3ajk01xmKpiaUmlppYamKpiaUmlppYamKpiaUmlppYamKpiaUmlppYamKpiaUmlppYamKpiaUmlppYamKpiaUmlppYamKpiaUmllr8fkrCvEJcgV0K353zFeKpxlgstYprtlzptnX0m9Zu7Bn3PXCM93b0J3JX7NGfyF2xbaWN3Zr6TcYfsPXDXTsZ6ZdNrLL/CfnvVuBOWLctLL2pHj1iqb0AOK4ZUEQyJ7IAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">48 (27.3%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">cocaine_users [numeric]</td>
+<td style="text-align: left;">No. of consumers cocaine sold to</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 105.4 (152.6)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">min ≤ med ≤ max:</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">0 ≤ 50 ≤ 900</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">IQR (CV) : 80 (1.4)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle;">33 distinct values</td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAHYAAABWCAQAAACwAqqsAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAA4UlEQVR42u3cTQ6CMBQAYWp6R++g54E7cErd1qQv4b8yndkRxfQL9rFr+gz99Gi9ALFi95fLiyncwO/UeqFbK0n596Nn9Ya59YoPqqu/sVhqYqmJpSaWmlhqYqmJpSaWmlhqYqmJpSaWmlhqYqmJpSaWmlhqYqmJpSaWmlhqYqmJpSaWmlhqYqmJpSaWmlhqYqmJpSaWmlhqefut4+2OA1iIrcPudhzAQmyN9b+oqK72bFfYHQNqbdFAu26cnYKNWK13/inYdVP6iCcevwaH4ldS+a0JeBLWK8LS62oai6X2BcXOGHTH++0jAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">87 (49.4%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">meth_users [numeric]</td>
+<td style="text-align: left;">No. of consumers meth sold to</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 82.4 (105.6)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">min ≤ med ≤ max:</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">7 ≤ 50 ≤ 500</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">IQR (CV) : 80 (1.3)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle;">26 distinct values</td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAHYAAABWCAQAAACwAqqsAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAA3klEQVR42u3cQQ7CIBBAUTDc0TvoefQOPaVucWEyYCztn/93TdOG19BZUl8lT5fVCxAr9vdaf/Ec+IHvdfXSY/Wk9nnrGnzFttowVaptLJaaWGpiqYmlJpaaWGpiqYmlJpaaWGpiqYmlJpaaWGpiqYmlJpaaWGpiqYmlJpaaWGpiqYmlJpaaWGpiqYmlJpaaWGpiqYmlJpZaKmybffARPvngOOceTGPPeO5Bqm2cCju9jVcWnxellG5i7IAdWlqwuYmxAza+sH8Pvdp/9pGDdM7SrdvGFej7WqppLJbaG/FiEt59SRLcAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">123 (69.9%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">heroin_user_g [numeric]</td>
+<td style="text-align: left;">Quantity of heroin sold to sellers (grams)</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 0.7 (0.8)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">min ≤ med ≤ max:</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">0.2 ≤ 0.6 ≤ 6</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">IQR (CV) : 0.4 (1.1)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle;">13 distinct values</td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAHYAAABWCAQAAACwAqqsAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAAzUlEQVR42u3cQQ6DIBQAUWm4Y+9gz2Pv4Cnrli4aICRF5s/sjBJ5CWx/+mxxeszegFix4+Xy4d1wgV9p9pb7Kkn5+9WzsvScvfehQh1jsdTEUhNLTSw1sdTEUhNLTSw1sdTEUhNLTSw1sdTEUhNLTSw1sdTEUhNLTSw1sdTEUhNLTSw1sdTEUhNLTSw1sdTEUhNLTSw1sdTEUguFzb0LjoVnWXRja5Ms7jzLItQxDoXtPsYt/etet/xnK/6Tyu9bBums1v4LSy/UnRVL7QKPphBGjT8DDAAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg==" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">50 (28.4%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">cocaine_user_g [numeric]</td>
+<td style="text-align: left;">Quantity of cocaine sold to sellers (grams)</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 4.7 (3.4)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">min ≤ med ≤ max:</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">1 ≤ 4 ≤ 15</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">IQR (CV) : 4 (0.7)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle;">15 distinct values</td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAHYAAABWCAQAAACwAqqsAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAABB0lEQVR42u3cQQ6CMBQAUWu4I3fQ85Q7eErd1kVJAyW/TGd2Bk14oRLhG9L3MU/P6B0QK/Z8S/li2/kCv1P0rh6rJC3/m9bKRz7R+9ylqZaxWGpiqYmlJpaaWGpL6xtz9SLhPpcIzVjCJcJUy1gsNbHUxFITS00sNbHUxFITS00sNbHUxFITS00sNbHUmqd4fcsh/5IMwsaMQDtg7zOm7oC9z5h6qhOUWGpiqYmlJpaaWGpiqYmlJpaaWGqX3l3Mgz0X4lLsWt0SczNuqmUsllrY+KPekdNa2+xhQGx9wnB29jAg9kg7q6E45hBs2zGf6gSVyuO/DfaLp0evYhknoK/aVMtYLLUf13Mb7AwFqUgAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">87 (49.4%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">meth_user_g [numeric]</td>
+<td style="text-align: left;">Quantity of meth sold to sellers (grams)</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 0.6 (0.4)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">min ≤ med ≤ max:</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">0.2 ≤ 0.4 ≤ 2</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">IQR (CV) : 0.6 (0.7)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle;">11 distinct values</td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAHYAAABWCAQAAACwAqqsAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAA+UlEQVR42u3bSw6DIAAA0dJwx96hPY/eoadst5iI8Qs4zOyaauJTRF0Qfo9+etY+ALFijxfTH2P2Bv6E2ge6t5QUp3+9Znf41j7ik+pqGIulJpaaWGpiqYmlJpaaWGpiqYmlJpaaWGpiqYmlJpaaWGpiqYmlJpaaWGpiqYmlJpaaWGpiqYmlJpaaWGpiqcX9uw63W8x2AHu/xWwrsQNiTfFK7Nw1bPcK5nKCOlpu0NeeuC7BtjpxdTWMxVITS60r7CWPnjPa9pmx8DqbbN0sduvTes3WRbHz57/ce1VRbO3Pia4mqJCOrBHx1TrtndwkAejL1tUwFkvtDxqVGuio0A6dAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">124 (70.5%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">heroin_user_unit [numeric]</td>
+<td style="text-align: left;">Quantity of heroin sold to sellers (grams)</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 3.8 (3.9)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">min ≤ med ≤ max:</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">1 ≤ 3 ≤ 30</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">IQR (CV) : 2 (1)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">1</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">7</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">5.5%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">2</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">40</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">31.5%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">3</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">34</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">26.8%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">4</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">20</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">15.7%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">5</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">13</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">10.2%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">6</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">5</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">3.9%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">8</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">3</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">2.4%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">10</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">1</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">0.8%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">15</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">2</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">1.6%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">30</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">2</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">1.6%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAADEAAAC6CAQAAACt4m2MAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAABF0lEQVR42u3aYQ6CMAyGYWe4o4fwPHgHT4m/lI1Q0nUthub9fmlMeDK68IlSllt07uFCEmKq37yawTyL/bD1gab2o8fv1dttFTlmAQEBAWHO5krrd31dU+or+0BBbFIf9ewTNft9HalOiNh6I2knmmPTQkBAQJhD6ynj2HrSvaFb68lTzLFpISAgIMyh9ZQxtF7vL5/drdc/rRybFgICAsIcWk8ZVeuN/MOnar3R+eTYtBAQEBDm0HrKCK031nMHxLf1fCeSY9NCQEBAmEPrKbPTep6Nt7MKn6dZDomIQEBAQFyIoPWkNMS8OD7F+bdVQEBAQEAEJEfrca8HAQEBkY/gXk8KxWojIgIBAQHhRYS33imrgJDyAUB/ODxa+m6WAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">49 (27.8%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">cocaine_user_unit [numeric]</td>
+<td style="text-align: left;">Quantity of cocaine sold to sellers (grams)</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 3.3 (2.3)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">min ≤ med ≤ max:</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">0 ≤ 2.5 ≤ 10</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">IQR (CV) : 2 (0.7)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">0</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">1</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">1.1%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">1</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">14</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">15.9%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">2</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">29</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">33.0%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">3</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">12</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">13.6%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">4</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">12</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">13.6%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">5</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">10</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">11.4%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">6</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">3</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">3.4%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">7</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">2</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">2.3%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">10</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">5</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">5.7%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAADIAAACpCAQAAADDl6a6AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAABC0lEQVR42u3aQQ7CIBSEYTC9o4fwPHoHT1lXJmCA8mBg8fxn14V+aR9hlDSeYX1uGwxHyJFevM4QHlHzxems/TwuEBAQEJBKYrrvi6okhOC1T7L6fXb9PrIX9JFf3i8/8B64Ez8zAQEB+SfkZ4Mc2f6uQzOaMtCMnUmevbkZ+5IvID8zAQEBARGH+jXF1Iyjx7mGZhyfl58lDAICAiIOzWgKzQgCAgLiHqEZTeluxpnXfzqbcW5WfpYwCAgIiDg0oymVZlS9BltAvs2onoyfJQwCAgIiDs1oSqEZta1YuBPVGzhNZE1AQEBAHCA0YzuN01RdQ1ZPU5XTcbuEQUBAQGaz/z/jqviZyRbkA2T9MqEW3ifjAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">88 (50.0%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">meth_user_unit [numeric]</td>
+<td style="text-align: left;">Quantity of meth sold to sellers (grams)</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 2.8 (2.1)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">min ≤ med ≤ max:</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">1 ≤ 2 ≤ 10</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">IQR (CV) : 3 (0.7)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">1</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">15</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">28.8%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">2</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">16</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">30.8%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">3</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">5</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">9.6%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">4</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">8</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">15.4%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">5</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">4</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">7.7%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">6</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">1</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">1.9%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">8</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">1</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">1.9%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">10</td>
+<td style="text-align: left; padding: 0 2px; border: 0;">:</td>
+<td style="text-align: right; padding: 0 4px 0 6px; margin: 0; border: 0;">2</td>
+<td style="text-align: left; padding: 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0 2px; margin: 0; border: 0;">3.8%</td>
+<td style="text-align: left; padding: 0 4px 0 0; border: 0;">)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAADAAAACXCAQAAAD5EhBaAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAA90lEQVRo3u3ZURKCMAxF0dZhjy6C9egeWKX+RoptalIwnfv+1JmegXR4AvmVxuY2eP0JgEV+eDoMZM0pyWWWz5/vxuW34pv4MwAAAABQZHc13X5bpZIsr93ZaVG55rmn6OH1F0OcCudGS2k/x/jbFAAAAEARGq0ZVaOthkNTNJptLvG3KQAAAIAiNFoz3fdove3WeY/WP6P42xQAAABAERqtmesr03IDWABlZdqHHn8GAAAAMwA0WjNXNJq1w6pH4PGirgr4BwAAAOAPASqzDI0GAAAAEBGg0cp8eero12qHTx09JzHdNgUAAAA4yrmPNUck/gyGA28ZQy3QbB3hqQAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg==" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">124 (70.5%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">yrs_working [numeric]</td>
+<td style="text-align: left;">Years working</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 11.3 (6.3)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">min ≤ med ≤ max:</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">1 ≤ 13 ≤ 20</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">IQR (CV) : 10 (0.6)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle;">20 distinct values</td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAHYAAABWCAQAAACwAqqsAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAABIUlEQVR42u2bWw6DIBBFpWGP7qFdj+6hq2w/S1OND4Yy3jnnz0cMJ14RBk2vIQ633g1AFtl6crkxLz7Aj9S7kTWUSvn70Phz8rN3aw0JFWNkVUFWFWRVQVYVZFVBVpVcf4m2TIbTTveyltPOUDFGVpULPLN7We7KhqIrE5Ld7spCxRhZVZBVBVlVOr1nLecy7mX7LKER415MjT/wcCU7LuyzDHeoGCOrCrKqIKuKq/fsfs4NPy4qe274ESrGyKqCrCrIqoKsKsiqgqwqyKqCrCqGlYq1Uomff/lMyzKt12pqIcbbHKnutV6IbC57ZOXcT7h3yPq5M3+Q9XNnagnVQSGrCrKqIKsKsqqEkk3lwHeWGQV/uBelgyTot0qoGCOryhv2DiJEeRwAQAAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg==" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">16 (9.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">seller_same_level [numeric]</td>
+<td style="text-align: left;">No. of known sellers on same market level</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 9.8 (17.5)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">min ≤ med ≤ max:</td>
+</tr>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">0 ≤ 6 ≤ 200</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">IQR (CV) : 6.2 (1.8)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle;">22 distinct values</td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAHYAAABWCAQAAACwAqqsAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAAxElEQVR42u3cQQ5AMBQAUZXe0R04D3dwSrYVFU0qqUxnduiiL8Xyh2Pop7H1BsSKrS+mF1v2A15C603WlJLi9dF0W7y33u2HdfUai6UmlppYamKpiaUmlppYamKpiaUmlppYamKpiaUmlppYamKpiaUmlppYamKpiaUmlppYamKpiaUmlppYamKpiaUmlppYamKpiaUmlppYamKpxfcla/EUpb8PZinATpl7+w8HszwcSnIAIV2xASdhzU9Yel39oMRSOwE0vQ9E6cT6LQAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg==" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">20 (11.4%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">link.yn [factor]</td>
+<td style="text-align: left;">Able to connect to other sellers?</td>
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">1. No</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">2. Yes</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table data-quarto-postprocess="true" class="table"><tbody>
+<tr class="odd" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">121</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">68.8%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+<tr class="even" style="background-color:transparent">
+<td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">55</td>
+<td style="text-align: left; padding: 0 2px 0 0; border: 0;">(</td>
+<td style="text-align: right; padding: 0; border: 0;">31.2%</td>
+<td style="text-align: left; padding: 0 4px 0 2px; border: 0;">)</td>
+</tr>
+</tbody></table></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAFsAAAArCAQAAAC9HTzTAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnDB4SDTgwrf36AAAAiklEQVRYw+3XwQ2AIBBEUdbYoz1oPdoDVeoVTLgQWXbM/zcu5B3GROxOii2zAbDjt5aHK/TQd2uwU9pm25rl6iQ6EtiwYYcKNmzYoYLt2esPMPfd4p6Vv9jWfY1HpVR0JKLsatvnR4+yY/jaBjzKPD5r0ZHAhg07VLBhww4VbM/+8CjTSXQksD17ABoAC6+w2gXGAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: center;">0 (0.0%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Generated by <a href="https://github.com/dcomtois/summarytools">summarytools</a> 1.0.1 (<a href="https://www.r-project.org/">R</a> version 4.3.1)<br>2023-12-31</p>
+</div>
+</div>
+<section id="characteristics-of-people-who-supply-drugs" class="level3"><h3 class="anchored" data-anchor-id="characteristics-of-people-who-supply-drugs">Characteristics of People Who Supply Drugs</h3>
+</section><section id="sell-to-sellers" class="level3"><h3 class="anchored" data-anchor-id="sell-to-sellers">Sell to Sellers</h3>
+</section><section id="sell-to-consumers" class="level3"><h3 class="anchored" data-anchor-id="sell-to-consumers">Sell to Consumers</h3>
+</section><section id="seller-stock-and-sales-during-covid-19" class="level3"><h3 class="anchored" data-anchor-id="seller-stock-and-sales-during-covid-19">Seller Stock and Sales During COVID-19</h3>
+</section></section><section id="discussion" class="level2"><h2 class="anchored" data-anchor-id="discussion">DISCUSSION</h2>
+
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
+        }
+        typesetMath(container);
+        return container.innerHTML
+      } else {
+        typesetMath(note);
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      typesetMath(note);
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/www\.quantumjitter\.com");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script><script src="https://giscus.app/client.js" data-repo="cgoo4/quantumjitter" data-repo-id="" data-category="Comments" data-category-id="" data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light_high_contrast" data-lang="en" crossorigin="anonymous" data-loading="lazy" async="">
+</script><input type="hidden" id="giscus-base-theme" value="light_high_contrast"><input type="hidden" id="giscus-alt-theme" value="dark_dimmed">
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Published with <a href="https://quarto.org/">Quarto</a> v1.4.449 | Hosted by <a href="https://www.netlify.com">{{&lt; iconify simple-icons netlify &gt;}}</a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>© 2023 <a href="./about">Carl Goodwin</a> | <a href="https://www.quantumjitter.com/license">MIT License</a></p>
+</div>
+  </div>
+</footer>
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

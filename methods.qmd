@@ -1,0 +1,269 @@
+---
+title: "Methods"
+format:
+  html:
+    toc: true
+    toc-location: left
+from: markdown+emoji
+---
+
+# Research Interests
+
+Microbes, Parasites, Genomics, Metabolomics, Bioinformatics, Phylogenetics, Infectious disease, Zoonoses, One Health, Multi-omics data integration. 
+
+<!-- <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16"> <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"/> <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"/> </svg> -->
+
+# Education
+
+**Doctor of Philosophy**  **|**   *Murdoch University, Perth, Australia*,  2022
+
+- [Ecology of Ticks and Microbes in Australian Wildlife](https://researchrepository.murdoch.edu.au/id/eprint/65255/). Supported by Research Training Program (PhD tuition and stipend) scholarship.
+- Supervisors: Dr. Charlotte Oskam, Prof. Peter Irwin, Prof. Una Ryan, and Prof. Peter Banks.
+- Use of molecular tools to investigate the epidemiology of tick (and other vector) associated microbes (bacteria and protozoa) present in Australian wildlife.
+
+**Bachelor of Science Honours** (*Molecular Biology*)   **|**   *Murdoch University, Perth, Australia*, 2017
+
+- [Profiling the microbiome of ticks parasitising Australian bandicoots](http://researchrepository.murdoch.edu.au/id/eprint/40003). Supported by Myrtle AB Lamb Honours Scholarship 
+- Supervisors: Dr. Charlotte Oskam and Prof. Peter Irwin.
+- Application of next generation sequencing to characterise the bacterial composition of tick (Acari: Ixodida) and tissues samples.
+
+**Bachelor of Science**   **|**   *Murdoch University, Perth, Australia*, 2016
+
+- Distinction average -- Double major in Animal Health and Conservation & Wildlife Biology
+- Research project final year -- small mammal camera trapping in Dryandra woodlands. Supervisors: A/Prof Peter Spencer and Mark Cowan (Department of Parks and Wildlife, WA). 
+
+# Employment
+
+**Postdoctoral research fellow**  **|**   *Murdoch University, Perth, Australia*,  2021--Present
+
+- Application of metabolic profiling and genomic sequencing to understand the age associated changes linked with the changing gut microbiome. 
+- Principal investigator -- Prof. Elaine Holmes ARC laureate project [*Understanding host-microbiome signalling axes in ageing*](https://www.arc.gov.au/news-publications/media/funding-announcement-kits/australian-laureate-fellowships-2020/2020-laureate-profile-professor-elaine-holmes) -- [Centre for Computational and Systems Medicine](https://www.murdoch.edu.au/research/hfi/our-centres/centre-for-computational-and-systems-medicine).
+- Roles: Development of culture and genomic tools to investigate and characterise the human microbiome; processing and integration of large multi-omic data sets; project coordination including ethics applications, establishment of new laboratory areas, liaising with external collaborators and stake-holders
+
+**Research assistant**  **|**   *Murdoch University and Western Australian Police*,     2020
+
+- Molecular forensic DNA laboratory work and analysis
+- Principal investigator: Dr. Shanan Tobe 
+- Roles: Processing of samples in clean laboratory, development of polymerase chain reactions (PCR), genomic sequencing,  data processing and reporting.
+
+**Demonstrator**  **|**   *Murdoch University*,  2020--2017
+
+- Sessional teaching and marking for undergraduate units: Veterinary Parasitology (VET278), Veterinary Microbiology (VET211), Forensic DNA Analysis (BIO352).
+
+**Research assistant**  **|**   *Murdoch University and Department of Primary Industries*,        2018
+
+- Casual research role in the dietary analysis of feral pigs using high-throughput sequencing.
+- Principal investigators: Dr. Peter Adams and Dr. Charlotte Oskam
+- Roles: Wet laboratory processing of samples for amplicon high-throughput sequencing and data analysis.
+
+**Super computing internship**  **|**   *Pawsey Supercomputing Centre and CSIRO*,        2018--2017
+
+- Summer internship role on the Meta-analysis of Australian tick microbiomes. [Video of my experiences](https://www.youtube.com/watch?v=4kf2OR9lEww&t=1s).
+- Principal investigator: Dr. Charlotte Oskam
+- Roles: Development and document of computational workflows for high-throughput sequencing, [website](https://cryptick-lab.github.io/NGS-Analysis/_site/index.html). 
+
+# Publications
+
+## Journal Articles
+
+Sanabria, J., **Egan, S.**, Masuda, R., Lee, A., Gibson, G. R., Nicholson, J. K., Wist, J., Holmes E. 2022. Overview of the Nomenclature and Network of Contributors to the Development of Bioreactors for Human Gut Simulation Using Bibliometric Tools: A Fragmented Landscape. *Journal of Agricultural and Food Chemistry*, 70(37), 11458--11467. DOI: [10.1021/acs.jafc.2c03597](https://doi.org/10.1021/acs.jafc.2c03597)
+
+Gutierrez, C. F., Romero A. N., **Egan, S.**, Holmes, E., Sanabria, J. 2022. Exploiting the potential of bioreactors for creating spatial organisation in the soil microbiome: A strategy for increasing sustainable agricultural practices. *Microorganisms*, 10(7), 1464. DOI: [10.3390/microorganisms10071464](https://doi.org/10.3390/microorganisms10071464)
+
+**Egan, S.**, Lettoof, D., Oskam, C. 2022. First record of the stump-tailed lizard tick, *Amblyomma* *albolimbatum* (Ixodida, Ixodidae) parasitising a human. *Ticks and Tick-Borne Diseases*, 13(1), 101873. DOI: [10.1016/j.ttbdis.2021.101873](https://doi.org/10.1016/j.ttbdis.2021.101873)
+
+**Egan, S.**, Taylor, C., Banks, P., Northover, A., Alhstrom, L., Ryan, U., Irwin, P., Oskam C. 2021. The bacterial biome of ticks and their wildlife hosts at the urban-wildland interface. *Microbial Genomics*, 7(12), 000730. DOI: [10.1099/mgen.0.000730](https://doi.org/10.1099/mgen.0.000730)
+
+**Egan, S.**, Taylor, C., Austen, J., Banks, P., Northover, A., Alhstrom, L., Ryan, U., Irwin, P., Oskam C. 2021. Haemoprotozoan surveillance in peri-urban native and introduced wildlife from Australia. *Current Research in Parasitology & Vector-Borne Diseases*, 1, 100052. DOI: [10.1016/j.crpvbd.2021.100052](https://doi.org/10.1016/j.crpvbd.2021.100052)
+  
+Hall, J., Rose, K., Austen, J., **Egan, S.**, Bilney, R., Kambouris, P., MacGregor, C., Dexter, N. 2021. Baseline health parameters for a newly established population of long-nosed potoroo (*Potorous tridactylus*) at Booderee National Park, Australia. *Journal of Wildlife Diseases*, 57(3), 515--524. DOI: [10.7589/JWD-D-20-00168](https://doi.org/10.7589/JWD-D-20-00168)
+
+Braima, K., Zahedi, A., **Egan, S.**, Austen, J., Xiao, L., Witham, B., Pingault, N., Perera, S., Oskam, C., Reid, S., Ryan, U. 2021. Molecular analysis of cryptosporidiosis cases in Western Australia in 2019 and 2020 supports the occurrence of two swimming pool associated outbreaks and reveals the emergence of a rare *C. hominis* IbA12G3 subtype. *Infection, Genetics and Evolution*, 92, 104859. DOI: [10.1016/j.meegid.2021.104859](https://doi.org/10.1016/j.meegid.2021.104859)
+
+Braima, K., Zahedi, A., Oskam, C., Austen, J., **Egan, S.**, Reid, S., Ryan, U. 2021. Zoonotic infection by *Cryptosporidium fayeri* IVgA10G1T1R1 in a Western Australian human. *Zoonoses and Public Health*, 68(4), 358--360. DOI: [10.1111/zph.12806](https://doi.org/10.1111/zph.12806)
+
+**Egan, S.**,  Ruiz-Aravena, M., Austen, J., Barton, X., Comte, S., Hamilton, D., Hamede, R., Ryan, U., Irwin, P., Jones, M., Oskam, C. 2020. Blood parasites in endangered wildlife: trypanosomes discovered during a survey of haemoprotozoa from the Tasmanian devil. *Pathogens*, 9(11), 873. DOI: [10.3390/pathogens9110873](https://doi.org/10.3390/pathogens9110873)
+
+Boulet, C., **Egan, S.**, Jones, L., Jonsdottir, T., Power, M., Ralph, S., Tran, L., White, M. 2020. Parasitravaganza 2020: Insights into a Virtual Parasitology Conference. *Trends in Parasitology*, 36(11), 867--875. DOI:    
+[10.1016/j.pt.2020.09.009](https://doi.org/10.1016/j.pt.2020.09.009)
+
+Austen, J., Van Kampen E., **Egan, S.**, O'Dea, M., Jackson, B., Ryan, U., Irwin, P., Prada, D. 2020. First report of *Trypanosoma dionisii* (Trypanosomatidae) identified in Australia. *Parasitology*, 147(14), 1801--1809. DOI:    
+[10.1017/S0031182020001845](https://doi.org/10.1017/S0031182020001845)
+
+**Egan, S.**, Taylor, C., Austen, J., Banks, P., Alhstrom, L., Ryan, M., Irwin, P., Oskam C. 2020. Molecular identification of the *Trypanosoma* (*Herpetosoma*) *lewisi* clade in black rats (*Rattus rattus*) from Australia. *Parasitology Research*, 119(5), 1691--1696. DOI: [10.1007/s00436-020-06653-z](https://doi.org/10.1007/s00436-020-06653-z)
+
+**Egan, S.**, Loh, S-M., Banks, P., Gillet, A., Alhstrom, L., Ryan, M., Irwin, P., Oskam C. 2020. Bacterial community profiling highlights complex diversity and novel organisms in wildlife ticks. *Ticks and Tick-Borne Diseases*, 11(3), 101407. DOI: [10.1016/j.ttbdis.2020.101407](https://doi.org/10.1016/j.ttbdis.2020.101407)
+
+Evans, M., **Egan, S.**, Irwin, P., Oskam, C. 2019. Automatic Barcode Gap Discovery reveals large COI intraspecific divergence in Australian Ixodidae. *Zootaxa*, 4652(2), 393–396. DOI: [10.11646/zootaxa.4656.2.13](https://doi.org/10.11646/zootaxa.4656.2.13)
+
+Irwin, P., **Egan, S.**, Greay, T., Oskam C. 2018. Bacterial tick-associated infections in Australia: Current studies and future directions. *Microbiology Australia*, 39(4), 200-202. DOI: [10.1071/MA18063](https://doi.org/10.1071/MA18063)
+
+Loh, S-M., **Egan, S.**, Gillet, A., Banks, P. B., Ryan U. M., Irwin, P. J., Oskam, C. L. 2018. Molecular surveillance of piroplasms in ticks from small and medium-sized urban and peri-urban mammals in Australia. *International Journal of Parasitology: Parasites and Wildlife* 7(2), 197-203. DOI: [10.1016/j.ijppaw.2018.05.005](https://doi.org/10.1016/j.ijppaw.2018.05.005)
+
+## Conference presentations
+
+**Egan, S.** 2022. Influence of the gut microbiome in metabolism of chiral amino acids. *Precision Nutrition Symposium*, Murdoch University.
+
+**Egan, S.** 2022. Individual profiling substrate utilization of the gut microbiome. *ASEAN Microbiome Nutrition Centre*, Singapore.
+
+**Egan, S.** 2021. The bacterial biome of ticks and their wildlife hosts at the urban-wildland interface. *Global Microbiome: West Coast Microbiome Network*, Perth, Western Australia. *Award winner*.
+
+**Egan, S.** 2021. What's in the wildlife? Surveillance of ticks and their associated microbes in Australian wildlife. *14th International Symposium on Ticks and Tick-borne Diseases (ISTTBD-XIV)*, online, hosted by German Society for Parasitology (DGP). *Award winner*.
+
+**Egan, S.**, Fontaine, J., Ryan, U., Irwin., and Oskam C. \textcolor{awesome}{[2020 - postponed}. Molecular and ecological insights into the ornate kangaroo tick, *Amblyomma triguttatum*. *10th Tick and Tick-borne Pathogen Conference (TTP10)*, Romania.
+
+**Egan, S.**, Fontaine, J., Veber, W., Ruthof, K., Ryan, U., Irwin, P., and Oskam, C. 2019. Insights into *Amblyomma triguttatum*. *Combined Biological Sciences Meeting*, Perth, Western Australia
+
+**Egan, S.**, Fontaine, J., Veber, W., Ruthof, K., Ryan, U., Irwin, P., and Oskam, C. 2019. The ecology of *Amblyomma triguttatum triguttatum* in Western Australia. *Australian Society for Parasitology Annual Conference*, Adelaide, South Australia.
+
+**Egan, S.**, Evans, M., Irwin, P., and Oskam, C. 2019. Molecular barcoding of Australian hard ticks (Ixodidae). *Australian Society for Parasitology Annual Conference*, Adelaide, South Australia.
+
+**Egan, S.**, Siew-May, L., Gillet, A., Banks, P., Ryan U., Irwin, P., and Oskam, C. 2018. Ticks parasitizing Australian wildlife and surveillance of potential tick-borne pathogens. *Australian Society for Parasitology Annual Conference*, Melbourne, Victoria.
+
+## Poster presentations
+
+**Egan, S.**, Loh, S-M., Banks, P., Gillett, A., Ahlstrom, L., Ryan, U., Irwin. P., and Oskam C. \textcolor{awesome}{([2020 - postponed]}. The Australian tick microbiome: highlighting the diversity down under. *10th Tick and Tick-borne Pathogen Conference (TTP10)*, Romania.
+
+**Egan, S.**, Greay, T., Gofton, A., Ryan U., Irwin, P., and Oskam, C. 2018. What’s in a tick? Meta-analysis of microbial diversity in Australian ticks. *Global Microbiome II 2018 (West Coast Microbiome Network)*, Perth, Western Australia. 
+
+**Egan, S.**, Siew-May, L., Gofton, A., Greay, T., Banks, P., Irwin, P., and Oskam, C. 2017. Are bandicoot ticks a reservoir for novel bacteria? *Combined Biological Sciences Meeting*, Perth, Western Australia.
+
+
+# Grants & Awards
+
+- Seed Grant (Research & Innovation), Murdoch University, awarded November 2021 (co-investigator)
+
+- Seed Grant (pool B), Spinnaker Health Research Foundation, awarded November 2021 (co-investigator)
+
+- Flash talk presentation winner, Global Microbiome Perth (West Coast Microbiome Network), awarded August 2021
+
+- Sinnecker-Kunz Award for early career researchers (ECRs) presented at the [14th International Symposium on Ticks and Tick-borne Diseases (ISTTBD-XVI)](https://www.ittbd-symposium.com/2/general-information/review-on-2021/sinnecker), 1st place out of 12 ECRs selected to present, awarded March 2021 [*Murdoch Media write up*](https://www.murdoch.edu.au/news/articles/early-career-researcher-wins-international-acclaim-for-tick-research)
+
+- Holsworth Wildlife Research Endowment grant (*Ecological Society Australia*) awarded October 2020
+
+- Ticks and tick-borne pathogens (TTP10) conference student grant awarded February 2020 [*postponed to 2022*]
+
+- Concepts in Parasitology course sponsorship (*Bayer Australia*) awarded November 2019
+
+- Holsworth Wildlife Research Endowment grant (*Ecological Society Australia*) awarded July 2019
+
+- Australian Society for Parasitology Conference Travel Grant awarded July 2019
+
+- Australian Society for Parasitology Conference Travel Grant awarded September 2018
+
+- Holsworth Wildlife Research Endowment grant (*Ecological Society Australia*) awarded June 2018
+
+- Research Training Program (PhD tuition and stipend) scholarship (*Australian Government*) awarded 2018
+
+- Best poster design at the Combined Biological Sciences Meeting awarded August 2017
+
+- Myrtle AB Lamb Honours Scholarship (*Murdoch University*) awarded March 2017
+
+
+# Teaching
+
+In addition to casual laboratory demonstrating for undergraduate units, I have also coordinated and written material for the following:
+
+* BIO512 Introduction to Systems Medicine,                 *2022*
+    - Development of new lectures and practical laboratories in genomics and transcriptomics.
+* BIO514 Applications of Systems Medicine,   *2022--2021 *
+    - [Development of new practical laboratories and workshops relating to microbiome and data analysis](http://siobhonlegan.com/2022-systMed-genomics/index.html) 
+* BIO513 Introduction to Bioinformatics and Data Science ,   *2022* 
+    - [Development of new lecture and workshop - introduction to genomic data analysis](http://siobhonlegan.com/2022-systMed-genomics/index.html)
+* MICR5835 Vectors of Infectious Diseases and Vector Control,     *2022--2019*  
+    - Guest lecturer for Tick Biology and Identification lecture and laboratory
+* BIO510 Research design in systems medicine,    *2021* 
+    -[Development of new workshop on microbiome data analysis](http://siobhonlegan.com/BIO510-microbiome)
+
+## Research student supervision
+
+- Talya Conradie, Masters (Research) - Cataloguing the lung-associated virome using data from shotgun metagenomic studies.
+- Ash Peck, Doctor of Philosophy - Investigating mosquito-borne viruses and parasites in Western Australia using next-generation sequencing.
+- Ruby Dixon, Bachelor of Science Honours - Identification of unique microbial signatures pre- and post-coitus in male-female pairings by next generation sequencing and its potential to detect sexual contact.
+
+
+# Service and presentations
+
+Conference Organising Committee, West Coast Microbiome Network, Global Microbiome,  *Present--2021*
+
+Statistical Bioinformatics Seminar, The University of Sydney, Sydney Precision Bioinformatics Alliance,  *2022*
+
+Career Workshop, Murdoch University, Student Society Medical, Molecular and Forensic Science,  *2022*
+
+International Woman's Day, Murdoch University, [#breakthebias video](https://web.microsoftstream.com/video/ee8e2d07-357e-4255-8c24-c9dacc119a79),  *2022*
+
+Women in STEMM Research Symposium, Murdoch University,  *2021*
+
+Volunteer [ResBaz, Perth](https://curtinic.github.io/ResBazPerth2021/) as workshop helper, Curtin University,  *2021*
+
+WISE Women Outreach, STEMM Workshop for high school students, Murdoch University,  *2021*
+
+What's in the wildlife? Ticks & microbes, Online seminar series, Australian Society for Parasitology,  *2021*
+
+Conference Organising Committee, Online Parasitravaganza, Australian Society for Parasitology,  *2020*
+
+Student Chapter Committee, Wildlife Disease Association Australiasia, *2019--2018*
+
+Murdoch University Open Day, Parasitology display,  *2019*
+
+STEM & Supercomputers - career's night, Pawsey Supercomputing Centre, [Event write up](https://pawsey.org.au/stem-supercomputers-pawseys-first-careers-night/),  *2018*
+
+Perth Royal Show, Parasitology Life Undercover Display,  *2017*
+
+Field and Laboratory Assistant, Parasitology Department, Murdoch University,  *2016--2014*
+
+Secretary, Western Australia Wildlife Rehabilitation Council Inc.,  *2016--2014*
+
+Animal attendant, Little Paws Animal Rescue,  *2015--2014*
+
+## Peer review
+
+- PeerJ (2019)
+- Parasites & Vectors (2020)
+- Microbial Ecology (2021)
+- PLoS One (2021)
+
+
+# Training & Skills
+
+## Training courses
+
+`A selection of relevant short courses and workshops`
+
+* Concepts in Parasitology,        November--December 2019
+    * Held at the Australian National University, Canberra & Kioloa, Australia. 
+    * Coordinated by the Australian Society for Parasitology.
+* ASMI BioInfoSummer,         December 2018
+    * Held at the University of Western Australia, Perth, Australia. 
+    * Coordinated by the Australian Mathematical Sciences Institute (AMSI). 
+* 5th National Postgraduate Training Workshop in Systematics,    July 2018
+    * Held at The University of Adelaide, Adelaide, Australia.
+    * Coordinated by the Australian Centre for Evolutionary Biology & Biodiversity.
+* Scientific use of animals,    March 2018
+    * Held at Murdoch University, Perth, Australia.
+    * Coordinated by the Animal Ethics Committee, Murdoch University, Perth, Australia.
+* Super computing and cloud resources,  June 2017
+    * Held at Murdoch University, Perth, Australia.
+    * Coordinated by the Pawsey Supercomputing Centre.
+    
+<!--
+* Safety in research training coordinated by Murdoch University  \hfill  2017
+* Chemical safety training coordinated by ChemWatch (online)  \hfill  2017
+* Introduction to working with animals in research and teaching coordinated by the University of Western Australia  \hfill  2015
+* Animal handling training coordinated by the Department of Parks and Wildlife (Western Australian Government)  \hfill  2015
+* Various wildlife workshops facilitated by the Department of Parks and Wildlife (Western Australian Government) and Wildlife Centres
+-->
+
+## Technical skills
+
+- **Computational biology and bioinformatics**
+    - Advanced knowledge of R/RStudio with emphasis on reproducible documentation including Rmarkdown, tidyverse, RShiny and dashboards, data interactive visualisation.
+    - Advanced knowledge of linux/unix platforms with emphasis on computational genomics.
+    - Experienced in use of version control software such as git.
+    - Additional coding languages with intermediate knowledge - python, SQL, html, JavaScript, LaTex.
+    - Experience in management of computational workflow including use of high performance computing (HPC) and virtual machines. Use of scheduling tools for HPC (e.g. SLURM) and workflow management software (e.g. snakemake).
+    - Experience in analysis of large data sets and integration of multi-omic biological data.
+- **Laboratory and fieldwork skills**
+    - Advanced skills in genomics wet laboratory including high-throughput sequencing (Illumina platform), Sanger Sequencing, polymerase chain reactions (PCR), real-time PCR, library preparation for sequencing platforms such as Illumina, PacBio, Oxford nanopore.
+    - General laboratory techniques - various skills in laboratory including PC2 areas, biosafety containment, workflows for ultra-clean laboratory (forensic and ancient DNA applications), culture and molecular biology techniques, microscopy, specimen archive including museum settings.
+    - Fauna field work - experience in small-medium mammal trapping, administration of anaesthesia, animal handling and collection of biological samples using non-invasive and invasive procedures (e.g. punch biopsy, blood collection). Experience also in wildlife trapping and image data analysis.

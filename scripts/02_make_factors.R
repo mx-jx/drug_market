@@ -49,9 +49,6 @@ pacman::p_load(
 load(
 here::here("data_processed", "drug_market_working.rda"))
 
-load(
-  here::here("data_processed", "ethos_factors.rda"))
-
 # shape <- read_sf(dsn = "C:/Users/mjstowe/OneDrive - UNSW/Desktop/R", layer = "Primary_Health_Networks")
 #
 # ethos.loc <- read.csv("~/GitHub/ethos/raw_data/ethos_locations.csv")
@@ -183,8 +180,7 @@ drug_market <- sa_drug_market %>%
 
     # Sells multiple substances
     sell_polydrug = case_when(
-      is.na(primary_drug_sold) == FALSE ~ "Yes" &
-      is.na(secondary_drug_sold) == FALSE ~ "Yes",
+      is.na(primary_drug_sold) == FALSE & secondary_drug_sold != 0 ~ "Yes",
       is.na(TRUE)   ~ NA_character_,
       TRUE       ~ "No") %>%
       ff_label("Sell >1 drug type") %>%
@@ -301,7 +297,7 @@ drug_market <- sa_drug_market %>%
 
     # Units of cocaine sold to sellers per week
     cocaine_seller_unit = as_numeric(x6b_cocaine_units)%>%
-    ff_label("Quantity of cocainesold to sellers (units)"),
+    ff_label("Quantity of cocaine sold to sellers (units)"),
 
     # Units of methamphetamine sold to sellers per week
     meth_seller_unit = as_numeric(x6b_meth_units)%>%

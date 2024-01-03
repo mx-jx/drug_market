@@ -12,7 +12,7 @@
 
 <meta name="date" content="2023-12-28" />
 
-<title>analysis</title>
+<title>South African Drug Market Data Overview</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -349,24 +349,501 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">analysis</h1>
+<h1 class="title toc-ignore">South African Drug Market Data
+Overview</h1>
 <h4 class="date">2023-12-28</h4>
 
 </div>
 
 
-<div id="r-markdown" class="section level2">
-<h2>R Markdown</h2>
-<p>This is an R Markdown document. Markdown is a simple formatting
-syntax for authoring HTML, PDF, and MS Word documents. For more details
-on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
-<p>When you click the <strong>Knit</strong> button a document will be
-generated that includes both content as well as the output of any
-embedded R code chunks within the document. You can embed an R code
-chunk like this:</p>
-<p>Note that the <code>echo = FALSE</code> parameter was added to the
-code chunk to prevent printing of the R code that generated the
-plot.</p>
+<p>Welcome to the Drug Market Datascape!</p>
+<div id="overview-of-the-data" class="section level2">
+<h2>Overview of the data</h2>
+<p>Summary of the data</p>
+<div class="container st-container">
+<h3>Data Frame Summary</h3>
+<h4>sa_drugmarket</h4>
+<strong>Dimensions</strong>: 176 x 43
+  <br /><strong>Duplicates</strong>: 1
+<br />
+<div style="max-height:500px;overflow-y:scroll;margin:10px 2px">
+  <table class="table table-striped table-bordered st-table st-table-striped st-table-bordered st-multiline ">
+    <thead>
+      <tr>
+        <th align="center" class="st-protect-top-border"><strong>Variable</strong></th>
+        <th align="center" class="st-protect-top-border"><strong>Label</strong></th>
+        <th align="center" class="st-protect-top-border"><strong>Stats / Values</strong></th>
+        <th align="center" class="st-protect-top-border"><strong>Freqs (% of Valid)</strong></th>
+        <th align="center" class="st-protect-top-border"><strong>Graph</strong></th>
+        <th align="center" class="st-protect-top-border"><strong>Missing</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td align="left">city.factor
+[factor]</td>
+        <td align="left">City</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">1. Cape Town</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">2. Durban</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">3. Pretoria</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">4. Johannesburg</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">5. Port Elizabeth</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">6. Pitermaritzberg</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">7. Bloemfontein</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">8. Mbombela</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">9. Polokwane</td></tr></table></td>
+        <td align="left" style="padding:0;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">13</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">7.4%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">13</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">7.4%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">24</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">13.6%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">35</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">19.9%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">22</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">12.5%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">2</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">1.1%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">18</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">10.2%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">29</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">16.5%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">20</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">11.4%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAACAAAACRCAQAAAAI5XKvAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAA5ElEQVRo3u2Y0RGEIAxEg3M9WoT1aA9XJfcbVOI65CYKy5d+5I1s3I2YsrStqbH+AYCPvtl2gizpvCjXACKzuv6+RAMCCBA5vMrY66tX0sZIYJGu8d3CCtrZ0IB2JmBYQO95oFctG4w8wLSJbyMBBIiMZefyuasazEB1qVN8GwkgwAUwTh7UP/yhPLCUiW8jAQSIdGHnArBmeMD/6QkIIGBgQHMeANPZ/iV3OZ2vQi5eRAIIcAF0MN5vnt6P2XDr9H6mUHwbCSDABRCfB5CdrQEP2NneVnwXCCDABeBr53dq0Az4AaPdNETQTYqVAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC"></td>
+        <td align="center">0
+(0.0%)</td>
+      </tr>
+      <tr>
+        <td align="left">gender.factor
+[factor]</td>
+        <td align="left">Gender</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">1. Female</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">2. Male</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">3. Transgender</td></tr></table></td>
+        <td align="left" style="padding:0;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">10</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">5.9%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">156</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">92.3%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">3</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">1.8%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAGYAAAA1CAQAAAAZzFawAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAAr0lEQVRo3u2ZsQ2AMBADCcqODME8sANTQgefCBCiie34KlAan/hIb5H2QYexdQDL9CCT48taXKA5tQ73hRg5l0fT+bS1TvkDqTGzDCqWQcUyqFgGFSmZap1hXGIuUlzUKDbLiphfd8wWxg4dxumxAnBQ3nGpMbMMKpZBxTKoWAYVy6DiPoNET32G41fGHdWXYeszrzLcWAYVy6BiGVQsg4plUKlkhPoMO8pjxo2UzAFr9hFYGdsHkQAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg=="></td>
+        <td align="center">7
+(4.0%)</td>
+      </tr>
+      <tr>
+        <td align="left">primary_drug
+[factor]</td>
+        <td align="left">Primary drug sold</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">1. Heroin</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">2. Crack cocaine</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">3. Powder cocaine</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">4. Methamphetamine</td></tr></table></td>
+        <td align="left" style="padding:0;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">104</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">59.1%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">29</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">16.5%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">12</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">6.8%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">31</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">17.6%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAEYAAABECAQAAACW74sEAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAArklEQVRo3u3ZwQ2AIAyFYWrc0R10Ht2BKfVaTQhCrK3xfzcu8sWS8KKypzgZvAFg7mTUi83hAM1SwKQ0vUzJp1WoMYEBAwbMrzCX6yD3PeWhiL4bpfsx/dH7xx3TWq0Qi+nLa6oQ1icq1JjAgAEDBoxX6DM6X+wztt2litF9xuP0hBoTGDBgwIDxCn1GR+/f+EnEtlg0/lWxHWOoAwwGDBgwYLwSt0J4J9SYwJRyAIR9FzsRoKbFAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC"></td>
+        <td align="center">0
+(0.0%)</td>
+      </tr>
+      <tr>
+        <td align="left">secondary_drug
+[factor]</td>
+        <td align="left">Primary drug sold</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">1. Only sold 1 drug</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">2. Heroin</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">3. Crack cocaine</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">4. Powder cocaine</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">5. Methamphetamine</td></tr></table></td>
+        <td align="left" style="padding:0;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">60</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">34.1%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">35</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">19.9%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">49</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">27.8%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">1</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">0.6%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">31</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">17.6%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAC4AAABTCAQAAABKDP2jAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAArUlEQVRYw+3YwQ2AIAwFUGrc0R10Ht2BKfUoIo2lFJLG/29eXhTw20hn6Jepo+0Yn9OLw2ADVmLwEJZGOo5bFuDAgTcme/2jTmFCaVeRmrmTeuOWZRdW7iZ8REXlyvfF71EEDhx4Y9Dnxaj6PA/X7wYjNL9Pfo8icOB/wFG5xTxwbeWK8K53Dhw4cOBG8dvn1SO09HfIC/8eoeu+sX5PC3Dgf8DHjdDW8bvmXfELbYwa6wZHYTgAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII="></td>
+        <td align="center">0
+(0.0%)</td>
+      </tr>
+      <tr>
+        <td align="left">sell_heroin
+[factor]</td>
+        <td align="left"></td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">1. No</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">2. Yes</td></tr></table></td>
+        <td align="left" style="padding:0;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">37</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">21.0%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">139</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">79.0%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAFkAAAAlCAQAAACD4o2eAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAAgklEQVRYw+3XsQ2AMAwFUYyyI0MwD+zAlNA6qRwKx1+66xBS9AqjGHs3tfbVAMg1a/7hDg/2ablMD2v9qyN0wJPrHRIcDMiQIUOGXCtB8nBhr72KY5lfOJJ3nYm8Un0wrrp/VW4Afi2f2fVfmOBgQIYMGTLkWkHOSH1f1khwMCBn9AEfUww4iiOJhgAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg=="></td>
+        <td align="center">0
+(0.0%)</td>
+      </tr>
+      <tr>
+        <td align="left">sell_crack_coke
+[factor]</td>
+        <td align="left"></td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">1. No</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">2. Yes</td></tr></table></td>
+        <td align="left" style="padding:0;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">98</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">55.7%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">78</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">44.3%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAEMAAAAlCAQAAACzbpy/AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAAeElEQVRYw+2W0Q2AMAgFwbijO+g8ukOn1F+0MRoaKSZ3f/zQSx8p1V0yMPQWQKNmtMUWOiiz3miITGES5VQlCQUNNNBA46cal8e8+Lo0o3abqbuNB3tyxlDWjxb98njNAYv+zbwlCQUNNNBAA40WMv43+pEkFDQsB/SAC6MtL+s3AAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC"></td>
+        <td align="center">0
+(0.0%)</td>
+      </tr>
+      <tr>
+        <td align="left">sell_powder_coke
+[factor]</td>
+        <td align="left"></td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">1. No</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">2. Yes</td></tr></table></td>
+        <td align="left" style="padding:0;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">163</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">92.6%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">13</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">7.4%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAGcAAAAlCAQAAAD12D8VAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAAh0lEQVRYw+2XwQ2AQAgEwdijPWg92sNVqV+8RBPvw7Lu/PhcmNySgJ/GxJTdgHT+ozPH4ig5SKs/6Jgt2b19pt0qsrBJBxnpICMdZKSDDJlOt+S0sVdg8Lh1+vAzmUQD5rDt3YGwlfuulwOh4hyRhU06yEgHGekgIx1kpIMM871TH7KwSQeZC3+AC6M/ZH8eAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC"></td>
+        <td align="center">0
+(0.0%)</td>
+      </tr>
+      <tr>
+        <td align="left">sell_cocaine
+[factor]</td>
+        <td align="left"></td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">1. No</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">2. Yes</td></tr></table></td>
+        <td align="left" style="padding:0;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">85</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">48.3%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">91</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">51.7%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAD8AAAAlCAQAAABfG/mpAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAAdklEQVRYw2P8zzCQgGlAbR/h1rMgc6bROCFkMzIwMDAgW8KCqiCchpavxCI2suN+1PpR60etH3nWoxW6K8kzhWzAiFwBMNLFSmQbB1PgT6VPywspkOlY4UIAauoa2Rlv1PpR60etH7WezmAw1ff0ByM77gfYegBi2gw49y9xPwAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg=="></td>
+        <td align="center">0
+(0.0%)</td>
+      </tr>
+      <tr>
+        <td align="left">sell_meth
+[factor]</td>
+        <td align="left"></td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">1. No</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">2. Yes</td></tr></table></td>
+        <td align="left" style="padding:0;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">114</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">64.8%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">62</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">35.2%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAEwAAAAlCAQAAABCZccyAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAAfElEQVRYw+2WQQqAMAwEE/GP/YO+R//QV9prFDxYtmQrO7dcwpANJH4ZJ0u2gMRQrLE4kxdu8xcxs5KoVW8VbZQSk5jE2JDYb8QeJ6n2dRmAx7vt3W0wRJc5ojwgb88OGTz87UFtKW2UEpOYxNiQmMRGM8c/xgRtlBL7SgPXQAujG1WV9wAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg=="></td>
+        <td align="center">0
+(0.0%)</td>
+      </tr>
+      <tr>
+        <td align="left">sell_polydrug
+[factor]</td>
+        <td align="left"></td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">1. No</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">2. Yes</td></tr></table></td>
+        <td align="left" style="padding:0;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">60</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">34.1%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">116</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">65.9%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAE0AAAAlCAQAAACtp6wMAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAAfElEQVRYw+2WQQrAIAwEm+If+4i+p/2Dr7S3Ent0Q40wcxMRRjawsbZlZZ8tgFosxR/ugME7TXntBUp/dYhiVf/bS+JAUUMNNdRQ+41PUUUWjYr5QpWaOQRvs0qg1/xt3AUXvBRp9JOeOFDUUEMNNdRQW2dfy0XiQFEb4QHuhAw4NjyGrwAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg=="></td>
+        <td align="center">0
+(0.0%)</td>
+      </tr>
+      <tr>
+        <td align="left">stock_heroin_c19
+[factor]</td>
+        <td align="left">Impact of COVID-19 on heroin stock</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">1. No change</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">2. Increased</td></tr></table></td>
+        <td align="left" style="padding:0;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">32</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">23.4%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">105</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">76.6%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAFcAAAAlCAQAAACdK70tAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAAg0lEQVRYw+3XwQmAMBBEUVfSo0VYj+nBKvW6yUESwU1G/txECA+csKtdi1LW0QC48yT5h9xV5N1iiB6Vyldb8yFnjLWKWBngwoULFy7ch1RDeMxobY/5BSJoZ+mMFyqX4ZjzT8h99NcLZFTK2yRWBrhw4cKFC/c/XOV9d/6IlQHul7kBwjAMOCeZesUAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII="></td>
+        <td align="center">39
+(22.2%)</td>
+      </tr>
+      <tr>
+        <td align="left">stock_cocaine_c19
+[factor]</td>
+        <td align="left">Impact of COVID-19 on cocaine stock</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">1. No change</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">2. Increased</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">3. Decreased</td></tr></table></td>
+        <td align="left" style="padding:0;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">26</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">26.0%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">72</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">72.0%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">2</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">2.0%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAFMAAAA1CAQAAACXFh/MAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAApElEQVRo3u3YwQmEMBBGYSPp0SKsR3uwSr2OOQhJnPiPvHdbhOXDUTK76ZwiNH8NgDm+bD/sDQ/qmrxoFpPvl5bKrzq8jEVBhg4TpmowYaoWhFkclqMOv9qSPeDdtoimrCzi0DetXxxmuJ2LnF/3tyTI0GHCVA0mTNVgvhn7Zm//2Df9/gpsr7ibOvvmI1M1mDBVgwlTNZiOzBD7pm4xh65aEOYFqI0RWKINOUwAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII="></td>
+        <td align="center">76
+(43.2%)</td>
+      </tr>
+      <tr>
+        <td align="left">stock_meth_c19
+[factor]</td>
+        <td align="left">Impact of COVID-19 on methamphetamine
+stock</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">1. No change</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">2. Increased</td></tr></table></td>
+        <td align="left" style="padding:0;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">23</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">33.3%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">46</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">66.7%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAE0AAAAlCAQAAACtp6wMAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAAe0lEQVRYw+2WQQrAIAwEm+IffUTf0/6hr6zXpMduqBFmbiLKyAobe7aq7LMFUMul+cUlf7zDtPNeoMWtLl18qy8LFA4UNdRQQw2133gVVW7VaJgvVLGbE/A2qwR6zp/GXXCpQ5FK/OmFA0UNNdRQQw21dea1WhQOFLUvDPCuDDjo+Ja0AAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC"></td>
+        <td align="center">107
+(60.8%)</td>
+      </tr>
+      <tr>
+        <td align="left">sales_heroin_c19
+[factor]</td>
+        <td align="left">Impact of COVID-19 on heroin sales</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">1. Decreased</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">2. Increased</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">3. No change</td></tr></table></td>
+        <td align="left" style="padding:0;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">106</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">76.8%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">20</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">14.5%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">12</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">8.7%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAFcAAAA1CAQAAACe/b+2AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAAmklEQVRo3u3WQQqAIBCFYSe6Y3eo89QdPGVtzVBCMmeG/+3cyIc88MkZLGUaDYCrJ3N6OFQWeZUCN4RltO2ReDsZKwNcuHDhwoVbSfYJx7Zbfoukq0aar+mZVGi5DHt1QG4KHv/1gNTRamNlgAsXLly4cP1w2btfx+/e1bBxi9x87+prsrEywIULFy5cuH64lveu/hgrA9yeuQAAKBFwGcFAwgAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg=="></td>
+        <td align="center">38
+(21.6%)</td>
+      </tr>
+      <tr>
+        <td align="left">sales_coke_c19
+[factor]</td>
+        <td align="left">Impact of COVID-19 on cocaine sales</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">1. Decreased</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">2. Increased</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">3. No change</td></tr></table></td>
+        <td align="left" style="padding:0;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">79</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">79.8%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">12</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">12.1%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">8</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">8.1%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAFoAAAA1CAQAAABrAzQGAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAAm0lEQVRo3u3WQQqAIBSEYV90x+5Q56k7eMramiSEoM6Tf3Zu5AMHHLuDvyyjAaCVs6aHS7jguxXQIWyjbYXE18llPUCDBi0Q0KBnQ2ffeKy7pXMs3UhWfU37pE7/9TiL0/SQeoRf01St6S7rARo0aIGABg1aIOzplpl9T2vt6E90vqdVG+6yHqBBgxYIaNCgBeJ/T3uJy3qA7pUHNZwRcIk1avkAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII="></td>
+        <td align="center">77
+(43.8%)</td>
+      </tr>
+      <tr>
+        <td align="left">sales_meth_c19
+[factor]</td>
+        <td align="left">Impact of COVID-19 on methamphetamine
+sales</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">1. Decreased</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">2. Increased</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">3. No change</td></tr></table></td>
+        <td align="left" style="padding:0;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">48</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">75.0%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">11</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">17.2%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">5</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">7.8%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAFUAAAA1CAQAAACaCG+LAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAAmklEQVRo3u2WwQmAMBAEc2KP9qD1aA9Wqd9EkGDwvKzM/PIJQ1jI2JFUGKIFUI1lzA9bd8Od7UY1pSnarWAvTkIDQBVVFVBFVQUh1cvHurfd8gmWF4o1X+NFbqc6gLUagUvgwz+KwNglCw0AVVRVQBVVFVD1gF59iz/2amSdVlTLXu1tt0IDQBVVFVBFVQVUPVDt1b4RGgCqHpzdLxFwRIW77wAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg=="></td>
+        <td align="center">112
+(63.6%)</td>
+      </tr>
+      <tr>
+        <td align="left">sell_sellers
+[factor]</td>
+        <td align="left">Sell to sellers</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">1. No</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">2. Yes</td></tr></table></td>
+        <td align="left" style="padding:0;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">129</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">73.7%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">46</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">26.3%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAFQAAAAlCAQAAAB2HAYuAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAAfklEQVRYw+2WwQmAQAwEE7FHe9B6tIerUr9R8HOeyS7s/PIJAxvI+mkcTNUCEq1ijsMBdrCrv4iaLdVugXabaKKXqETRkahE0aERfbzQ1rclAY89xLvX/EN044x+76h5W1IMH2te3k3TRC9RiaIjUYmiI9HRcPZRZGiil+hoLr9qC6MLt9n2AAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC"></td>
+        <td align="center">1
+(0.6%)</td>
+      </tr>
+      <tr>
+        <td align="left">sell_seller_only
+[factor]</td>
+        <td align="left"></td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">1. No</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">2. Yes</td></tr></table></td>
+        <td align="left" style="padding:0;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">171</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">97.2%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">5</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">2.8%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAGsAAAAlCAQAAADv5N+bAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAAiElEQVRYw+3XsQ2AIBBG4Tvjjuyg8+gOTKmNBWq0oIF3/K+jIXwBEvDDIja1XoBYYs3lYEdftMU/WGap9dqqy7dR0EMoFimxSIlFSixSQVmPx1Oum6W7vHzdevU0PVRKRjiE2wVe2dtmr91K4K/JDytKYpESi5RYpMQiJRapEf5bcQp6CMUidQLJrQtPOuY8CQAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg=="></td>
+        <td align="center">0
+(0.0%)</td>
+      </tr>
+      <tr>
+        <td align="left">heroin_sellers_g
+[numeric]</td>
+        <td align="left">Heroin sold to sellers (g/wk)</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">Mean (sd) : 197.3 (290)</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">min ≤ med ≤ max:</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">5 ≤ 100 ≤ 2000</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">IQR (CV) : 160 (1.5)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle">36 distinct values</td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAGcAAABKCAQAAAAMeoKaAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAAyklEQVRo3u3bQQ6DIBQA0dJwx96hPY/eoae0WyoarAsZfmd2RhJ5BllhWm6RuveegJz/4eTyYt74kF6p9xRblZPO37ceq6Hv3nP9sWCLTQ45OeTkkJNDTg45OeTkkJNDTg45OeTkkJNDTg45OeTkkJNDTg45OeTkkJNDTg45OeTkkJNDTg45OeSCcXJrwFSdrSafrG5yxjpZHWyxySEXjNPcCurIe90JTr3XcYAnOEeA66aL/gxK5XPmIf/rexavJQ0p2C3YziaH3AepbxSdjF9uEgAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg=="></td>
+        <td align="center">56
+(31.8%)</td>
+      </tr>
+      <tr>
+        <td align="left">coke_sellers_g
+[numeric]</td>
+        <td align="left">Cocaine sold to sellers (g/wk)</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">Mean (sd) : 71.9 (85.7)</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">min ≤ med ≤ max:</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">0 ≤ 40 ≤ 400</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">IQR (CV) : 85 (1.2)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle">35 distinct values</td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAGcAAABKCAQAAAAMeoKaAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAA6ElEQVRo3u3b0Q3CIBgAYTHs6A46D93BKfUVE4g0reX6e/dmrIYPaVMTml6XSF1nD0DO/3By/WLpnkiPNHug/epB58+3bs0PPGePeLhgi00OOTnk5JCTQ04OOTnk5JCTQ04OOTnk5JCTQ04OOTnk5JCTQ04OOTnk5JCTQ04OuTx2WGluPuJtPBrktLYeETceBVtscsjJISeHnBxycsgN3rONVzo75Y+5Xd2dM/d2NdhiC8bZtNjKikezjvkDuImz5izZfkZ1J6+akh9cCvYYYvtX+z4lqf6+5ZTP9d0rejqloFuwK5sccm/ddRnKr+/46AAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg=="></td>
+        <td align="center">90
+(51.1%)</td>
+      </tr>
+      <tr>
+        <td align="left">meth_sellers_g
+[numeric]</td>
+        <td align="left">Methamphetamine sold to sellers (g/wk)</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">Mean (sd) : 146.3 (222.2)</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">min ≤ med ≤ max:</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">3.2 ≤ 50 ≤ 1200</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">IQR (CV) : 145 (1.5)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle">24 distinct values</td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAGcAAABKCAQAAAAMeoKaAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAAxUlEQVRo3u3byw2DMBAAURy5x/SQ1AM9pMpwNRJZx0TCgzNzQ4C0T3xum97TSN16DyDnfzi5PFgqH9Iz9R53r3LovD11D2579Z77iwZ72eSQk0NODjk55OSQk0NODjk55OSQk0NODjk55OSQk0NODjk55OSQk0NODjk55OSQk0NODjk55OSQk0NODjk55OSQG4yTWy6eww2SaH9kPmn3pIkT74/EI5+ze9LE+QV7vNqTnYonm8pra+tIzB6fONdvsD+bHHIrfCUTwpwjx/QAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII="></td>
+        <td align="center">116
+(65.9%)</td>
+      </tr>
+      <tr>
+        <td align="left">heroin_sellers
+[numeric]</td>
+        <td align="left">No. of sellers heroin sold to</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">Mean (sd) : 26.2 (84.5)</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">min ≤ med ≤ max:</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">2 ≤ 6 ≤ 500</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">IQR (CV) : 6 (3.2)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle">11 distinct values</td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAGcAAABKCAQAAAAMeoKaAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAAr0lEQVRo3u3bwQmAMBAAwYukR4uwHu3BKvUbfWiEQJa48xMJuQV9XjpiJFPvAcz5T04uH7aqH2lJvYe+KofO11fz6+G99/SPBvvYzCEzh8wcMnPIzCEzh8wcMnPIzCEzh8wcMnPIzCEzh8wcMnPIzCEzh8wcMnPIzCEzh8wcMnPIzCEzh8wcMnPIzCEzh2ywnPz9yFqx5dNmx6fmpogo7rrltNrOqRykueRmIpg5ZCdLJAxrwIHy+QAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg=="></td>
+        <td align="center">139
+(79.0%)</td>
+      </tr>
+      <tr>
+        <td align="left">cocaine_sellers
+[numeric]</td>
+        <td align="left">No. of sellers cocaine sold to</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">Mean (sd) : 24.2 (48.7)</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">min ≤ med ≤ max:</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">0 ≤ 7 ≤ 200</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">IQR (CV) : 8 (2)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle">13 distinct values</td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAGcAAABKCAQAAAAMeoKaAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAAvklEQVRo3u3bQQrCMBBA0Ynkjr2Dnkfv0FPW7RQUGkTzO/6/Ky0hD6bLaVtU6jL7AnL+h9Pzw2PwR7q12dePiMiX7vtXy8Ax62zHi4oNmxxycsjJISeHnBxycsjJISeHnBxycsjJISeHnBxycsjJISeHnBxycsjJISeHnBxycsjJISeHnBxycsjJISeHnBxyxTj98yOOdP/mElfaU/kRZ3T35PjX+z2VYsPW8hSMriMxuqZha6cUvK3YsMkh9wQ/Nw0sODdNVgAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg=="></td>
+        <td align="center">153
+(86.9%)</td>
+      </tr>
+      <tr>
+        <td align="left">meth_sellers
+[numeric]</td>
+        <td align="left">No. of sellers meth sold to</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">Mean (sd) : 32.6 (47)</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">min ≤ med ≤ max:</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">2 ≤ 10 ≤ 200</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">IQR (CV) : 40 (1.4)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle">15 distinct values</td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAGcAAABKCAQAAAAMeoKaAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAAy0lEQVRo3u3bUQrCMBAA0Y3kjt5Bz6N38JT6u4IF12Azxpk/KZU8uoKBtN1jpQ6zFyDnfzg9f7gWf0jnNnv5ERF50f350rHwNbfZjhctNmxyyMkhJ4ecHHJyyMkhJ4ecHHJyyMkhJ4ecHHJyyMkhJ4ecHHJyyMkhJ4ecHHJyyMkh10duvhQOjO1zWGyI8/5xsb0Oiy02bHLIySEnh5wccnLIySE39I/6W1U2HhGRth5Izudbj8WGreXnWn0didEpDVv7ScFmiw2bHHIPNQYPMDE9/YAAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII="></td>
+        <td align="center">152
+(86.4%)</td>
+      </tr>
+      <tr>
+        <td align="left">heroin_seller_g
+[numeric]</td>
+        <td align="left">Quantity of heroin sold to sellers
+(grams)</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">Mean (sd) : 72.2 (153.4)</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">min ≤ med ≤ max:</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">0.8 ≤ 10 ≤ 600</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">IQR (CV) : 20 (2.1)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle">19 distinct values</td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAGcAAABKCAQAAAAMeoKaAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAAx0lEQVRo3u3bQQ6CMBQAUWt6R+6g58E7eErZfhNpS4jtWOftCAE6LbBrel1mch09AHP+JyfHg0flQ7qn0cP9JA46v59aCpc9R4+7wWQvmzlk5pCZQ2YOmTlk5pCZQ2YOmTlk5pCZQ2YOmTlk5pCZQ2YOmTlk5pCZQ2YOmTlk5pCZQ2YOmTlk5pCZQ2YOmTlk+fwtWqydNmt0yum1WeNQTnmOz8xwbfWKwnMP5Xxvhst3bn9uitNS247EdAurk36yYNdkP2pzyDZtXBMw47/a8AAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg=="></td>
+        <td align="center">141
+(80.1%)</td>
+      </tr>
+      <tr>
+        <td align="left">cocaine_seller_g
+[numeric]</td>
+        <td align="left">Quantity of cocaine sold to sellers
+(grams)</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">Mean (sd) : 18.9 (28.5)</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">min ≤ med ≤ max:</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">1 ≤ 6.1 ≤ 100</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">IQR (CV) : 10.8 (1.5)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle">14 distinct values</td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAGcAAABKCAQAAAAMeoKaAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAAyUlEQVRo3u3bQQ6CMBBAUWp6R+6g55E7eErcDjFqEUg/4/87Qmj6koFVKfOQqUvvDcj5H06NF1PTi3QrvTe9LG66Lm+NXx9+9N79x5INmxxycsjJISeHnBxycsjJISeHnBxycsjJISeHnBxycsjJISeHnBxycsjJISeHnBxycsjJISeHnBxycsjJIZeMU7cv8dp9p9PybesMYZ1DOPudll+7TrJhS8b5YdgaJ/osHPJfJMmGrcTJafsdidY1fKjLKQVvSzZscsg9AbjfEcRlcn+vAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC"></td>
+        <td align="center">154
+(87.5%)</td>
+      </tr>
+      <tr>
+        <td align="left">meth_seller_g
+[numeric]</td>
+        <td align="left">Quantity of meth sold to sellers
+(grams)</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">Mean (sd) : 51.9 (115.8)</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">min ≤ med ≤ max:</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">1 ≤ 10 ≤ 560</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">IQR (CV) : 45 (2.2)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle">10 distinct values</td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAACIAAACgCAQAAADDNnaaAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAA1ElEQVRo3u3YQQ6EIAyF4TLxjh5izjPewVPqYpIJQ4RiRKjp350Lv4QCL0DY5Hq9GhiGkCn+WH4Negftxy2HiMwiIrI+ticgIDWVLPuzC/5bId5I6q6LKv6v/XA+2awsR8NhFKSldcrOFIOAdEPIE7Un5AmIB8RnFByNIduTuVL4752dKQYB6Yb4yBP91aLQE14tQDwgPqIgLW4ZICB3IHbyRImCutNBMQpqB2dndkBAuiF2ooBbBgjI0xE7ecItAwRkIGInCjhagIAMRNpHwdDh2EF25vQ6lomQxUsAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII="></td>
+        <td align="center">153
+(86.9%)</td>
+      </tr>
+      <tr>
+        <td align="left">heroin_seller_unit
+[numeric]</td>
+        <td align="left">Quantity of heroin sold to sellers
+(units)</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">Mean (sd) : 481.9 (859.2)</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">min ≤ med ≤ max:</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">4 ≤ 60 ≤ 3000</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">IQR (CV) : 220 (1.8)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle">14 distinct values</td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAGcAAABKCAQAAAAMeoKaAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAAy0lEQVRo3u3bQQ6CMBBAUWt6R++g58E7cErdjolMIQb6Lf/tCJD0h2HXltdlJNfeCzDnPDk1XjwbP9Kj9F7uN3HR9fPWLXlt7r3uFQYbNnPIzCEzh8wcMnPIzCEzh8wcMnPIzCEzh8wcMnPIzCEzh8wcMnPIzCEzh8wcMnPIzCEzh8wcMnPIzCEzh8wcsrrl4Snd1J9t6Z8OOg6wKeeXLf3HHAc487DtpzWMqTCokJx8FNcP6mDDVuJXbh1HYrqHYSt/WbBosGEzh+wN64oTMNCmKTYAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII="></td>
+        <td align="center">149
+(84.7%)</td>
+      </tr>
+      <tr>
+        <td align="left">cocaine_seller_unit
+[numeric]</td>
+        <td align="left">Quantity of cocaine sold to sellers
+(units)</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">Mean (sd) : 208.8 (434.6)</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">min ≤ med ≤ max:</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">1 ≤ 50 ≤ 1800</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">IQR (CV) : 131.2 (2.1)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle">13 distinct values</td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAGcAAABKCAQAAAAMeoKaAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAAwklEQVRo3u3bwQ3CMAxAUQdlR3aAeegOnRKuRgIJ00M+5v9bVRHlqebocY9OnVZfQM7/cGZ+2Ip/pOtYff2IiHzp+fzqXDhmX+14UbNhk0NODjk55OSQk0NODjk55OSQk0NODjk55OSQk0NODjk55OSQk0NODjk55OSQk0NODjk55OSQk0NODjk55OSQk0OuGWce+fGtsFFS2SapnBsR6eRDnM/3SarbJN+e3GzYRv6u1XUkRpc0bOMnBW9rNmxyyD0AhxUPLO1bjLsAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII="></td>
+        <td align="center">156
+(88.6%)</td>
+      </tr>
+      <tr>
+        <td align="left">meth_seller_unit
+[numeric]</td>
+        <td align="left">Quantity of meth sold to sellers
+(units)</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">Mean (sd) : 276.1 (687.6)</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">min ≤ med ≤ max:</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">1 ≤ 89.5 ≤ 2800</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">IQR (CV) : 80 (2.5)</td></tr></table></td>
+        <td align="left" style="padding:0;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">1</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">2</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">12.5%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">6</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">1</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">6.2%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">20</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">2</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">12.5%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">40</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">1</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">6.2%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">50</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">1</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">6.2%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">79</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">1</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">6.2%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">100</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">5</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">31.2%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">400</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">1</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">6.2%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">500</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">1</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">6.2%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">2800</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">1</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">6.2%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAACsAAACgCAQAAAA/I11QAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAA1ElEQVRo3u3Y0QmDQBCE4b1gjxaRepIerNK8HXtBzR5hFwf+eZPgRxh0OGy7ZeSRooqxi794nxb9bL8pf/My/rQe3rDdpQRYWNier5d3/jU9TvMDEdiTi3ipooTXMIyRMQyxfhj/a1nrAYOFhe1hb+1yb31mt5eDKCysKMswGgdRWFjYEpa9NfYWFhZ2DMNoDCMsLGwJq7W3wU+Xsb94WsI6B7mM9Wk9CbCwsD1aw8hBNK8EWFjYbFZrbxlGWFjYAlZrGDmI5pUACwvbUzGMty9Bi/0A4XQ6liQeWtIAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII="></td>
+        <td align="center">160
+(90.9%)</td>
+      </tr>
+      <tr>
+        <td align="left">sell_users
+[factor]</td>
+        <td align="left">Sell to consumers</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">1. No</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">2. Yes</td></tr></table></td>
+        <td align="left" style="padding:0;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">6</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">3.4%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">168</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">96.6%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAGoAAAAlCAQAAAAAJrSlAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAAjUlEQVRYw+2XQQqAMAwEW+kf+wjfo3/wlXoRaXsQhEKYdeeWW4ZuQ5LPpMcS3YCl/ixV2mK/P9iao9v6TjsbhpeqqUZ3NwHJ+FmKgqUoWIqCpShISpW+PKL7mUJuF0HgHvvwstBq0MVvI9/2TcyGP0U9PPpZIBk/S1GwFAVLUbAUBUtR0L+nVJCMn6UoXIBnC+Qcg8RNAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC"></td>
+        <td align="center">2
+(1.1%)</td>
+      </tr>
+      <tr>
+        <td align="left">heroin_users
+[numeric]</td>
+        <td align="left">No. of consumers heroin sold to</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">Mean (sd) : 118.2 (163.5)</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">min ≤ med ≤ max:</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">5 ≤ 50 ≤ 1000</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">IQR (CV) : 117.5 (1.4)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle">33 distinct values</td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAGcAAABKCAQAAAAMeoKaAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAAzUlEQVRo3u3bQQ6CMBQAUWt6R++A54E7eErZVgtpIJhOvzM7IyF95JdVSe9bpO69FyDnfzi5/LFsbKRn6r3EVuWi8+dfj69LX73XerBgwyaHnBxycsjJISeHnBxycsjJISeHnBxycsjJISeHnBxycsjJISeHnBxycsjJISeHnBxycsjJISeHnBxyuXXBXB1GJh9FbnLGOoocbNiCcZrDVkfeTSc45N3ksNVxxu8SDmf8LuGcaf7Jt0KpvOsy5Hd9U/EQ0pCC3YK92eSQWwHMVRSh/nuv/gAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg=="></td>
+        <td align="center">48
+(27.3%)</td>
+      </tr>
+      <tr>
+        <td align="left">cocaine_users
+[numeric]</td>
+        <td align="left">No. of consumers cocaine sold to</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">Mean (sd) : 105.4 (152.6)</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">min ≤ med ≤ max:</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">0 ≤ 50 ≤ 900</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">IQR (CV) : 80 (1.4)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle">33 distinct values</td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAGcAAABKCAQAAAAMeoKaAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAAvUlEQVRo3u3bQQ5EMBhAYZXe0R3MecYdnJJtZTpSIvrUeztB8n+hVhWWrqX62gPIeQ8npgdTdiF9Qu0h90uHjttTw8/Fc+1pD9XYyyaHnBxycsjJISeHnBxycsjJISeHnBxycsjJISeHnBxycsjJISeHnBxycsjJISeHnBxycsjJISeHnBxycsjJIRfP3PTFbu4v4OSGp27uL+BQR8/l2inv/jV2IYewxkI6w/TI//rG5GmHRwr+1tinQA65FdOTE8VBuRZIAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC"></td>
+        <td align="center">87
+(49.4%)</td>
+      </tr>
+      <tr>
+        <td align="left">meth_users
+[numeric]</td>
+        <td align="left">No. of consumers meth sold to</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">Mean (sd) : 82.4 (105.6)</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">min ≤ med ≤ max:</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">7 ≤ 50 ≤ 500</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">IQR (CV) : 80 (1.3)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle">26 distinct values</td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAGcAAABKCAQAAAAMeoKaAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAAxElEQVRo3u3bQQ6CMBBA0db0jt4Bz6N34JS4HRbIYAL91v92xjTOD4O71qWM5NZ7AHP+J6fFD6/Ui/SovYdei0O39Vf33cNz7+k/GmzZzCEzh8wcMnPIzCEzh8wcMnPIzCEzh8wcMnPIzCEzh8wcMnPIzCEzh8wcMnPIzCEzh8wcMnPIzCEzh8wcMnPIBstpx488EzcVet1T+CKHfE/BZbtOZq1LKWGxT8pJDrLr6GLX+Lu560g0U3g69ScLNg32V2AO2RumjRDEMyrUlQAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg=="></td>
+        <td align="center">123
+(69.9%)</td>
+      </tr>
+      <tr>
+        <td align="left">heroin_user_g
+[numeric]</td>
+        <td align="left">Quantity of heroin sold to sellers
+(grams)</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">Mean (sd) : 0.7 (0.8)</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">min ≤ med ≤ max:</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">0.2 ≤ 0.6 ≤ 6</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">IQR (CV) : 0.4 (1.1)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle">13 distinct values</td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAGcAAABKCAQAAAAMeoKaAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAAtklEQVRo3u3bQQ5AMBQAUZXe0R04T93BKdlWguqqo+btBMmfpOx+2IeejK0HMOc/OTG/WAsf0hJaj3slHzqeb00Pr22t536hs8NmDpk5ZOaQmUNmDpk5ZOaQmUNmDpk5ZOaQmUNmDpk5ZOaQmUNmDpk5ZOaQmUNmDpk5ZOaQmUNmDpk5ZOaQmUNmDllnObHm4fS4QULYH6nK4e+PVOW0kUrredmpCPmzpXUkpvku5/s6+7OZQ3YARYIOLrjblTQAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII="></td>
+        <td align="center">50
+(28.4%)</td>
+      </tr>
+      <tr>
+        <td align="left">cocaine_user_g
+[numeric]</td>
+        <td align="left">Quantity of cocaine sold to sellers
+(grams)</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">Mean (sd) : 4.7 (3.4)</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">min ≤ med ≤ max:</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">1 ≤ 4 ≤ 15</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">IQR (CV) : 4 (0.7)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle">15 distinct values</td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAGcAAABKCAQAAAAMeoKaAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAA+0lEQVRo3u3bUQ7CIBBFUTHs0T3oeugeXKX+YsKkVCxzGd/9M9aEE9qGYppel0hdvQcgzv9wcv1hMy+kR/IeqF096Pz51a35g6f3iLsLdrKJQ04ccuKQE4dc7jusNJc/vKVPJ6e1+CEufYKdbOKQE4ecOOTEIScOOXHIiUNOHHLikBOHnDjkgnE6tw1HK8afyL/eR53EmbWPOsTh7VwPcXg718FuBeKQE4ecOOTEIScOOXHIiUMuGOeEh+vi+JbGCRzPZ9RgJ1swzrSNqXbHrrP9PSJnjvUKx7fXnzPnWMZcVnO2FGd/zlIN3pZ8r+9ezU5aUmAW7EYtDrk3bTsb1GZeJOsAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII="></td>
+        <td align="center">87
+(49.4%)</td>
+      </tr>
+      <tr>
+        <td align="left">meth_user_g
+[numeric]</td>
+        <td align="left">Quantity of meth sold to sellers
+(grams)</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">Mean (sd) : 0.6 (0.4)</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">min ≤ med ≤ max:</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">0.2 ≤ 0.4 ≤ 2</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">IQR (CV) : 0.6 (0.7)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle">11 distinct values</td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAGcAAABKCAQAAAAMeoKaAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAA4klEQVRo3u3awQ3CIABAUTHs6A46T7uDU+pRTFtF0sIH/78ZMeEVCz00PE4jdW49ATn/w4nph3n1RrqF1pP8XDrp+P7VZTH43nq2PzXYn00OOTnk5JCTQ04OOTnk5JCTQ04OOTnk5JCTQ04OOTnk5JCTQ04OOTnk5JCTQ04OOTnk5JAbjBNLfjRh30os4nDfSszgTB29ap3Boa5EISe3tVWsfT/tyCGs4mAbtRxycsjtuLOVl/vQtHGgJ+MQnPxN/tu4gzm1j9aDObWP1pBevrmjh81X12S1Q5eCzQbbqOWQewJUOxrQe+uSHwAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg=="></td>
+        <td align="center">124
+(70.5%)</td>
+      </tr>
+      <tr>
+        <td align="left">heroin_user_unit
+[numeric]</td>
+        <td align="left">Quantity of heroin sold to sellers
+(grams)</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">Mean (sd) : 3.8 (3.9)</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">min ≤ med ≤ max:</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">1 ≤ 3 ≤ 30</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">IQR (CV) : 2 (1)</td></tr></table></td>
+        <td align="left" style="padding:0;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">1</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">7</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">5.5%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">2</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">40</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">31.5%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">3</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">34</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">26.8%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">4</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">20</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">15.7%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">5</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">13</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">10.2%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">6</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">5</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">3.9%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">8</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">3</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">2.4%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">10</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">1</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">0.8%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">15</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">2</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">1.6%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">30</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">2</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">1.6%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAACsAAACgCAQAAAA/I11QAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAA/0lEQVRo3u3bYQ6CMAyG4c5wRw/hefAOnhL/yLLhZtaVLTS+/WOIyRPoyidCCJuMqNsQ1Rm7pBvPpNGPoKXSVVryr+6fz9c1mwALCxvrcPJaT9q9QhoQ6nTJKpVmNGG1/QIlB1sJRn3lq+JrwGBhYWORt3JK3pYuWc15W14NXwMGC+uRJRhFGYzt/9oVwajpu68Bg4WFjUXeSlPe6u+NNuRtX7d9DRgsrEeWYJRqMPaEYZXdg9HeYV8DBgsLG8tX3haC0RqKIl+97X9U9JM9q2BhYSezFw/GGU1YN+PD+al7CwsL+/fsjLwlGGFhYV2xXIhO2ltYWFg/bOAdqGHsG7qTOFREAMjCAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC"></td>
+        <td align="center">49
+(27.8%)</td>
+      </tr>
+      <tr>
+        <td align="left">cocaine_user_unit
+[numeric]</td>
+        <td align="left">Quantity of cocaine sold to sellers
+(grams)</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">Mean (sd) : 3.3 (2.3)</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">min ≤ med ≤ max:</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">0 ≤ 2.5 ≤ 10</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">IQR (CV) : 2 (0.7)</td></tr></table></td>
+        <td align="left" style="padding:0;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">0</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">1</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">1.1%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">1</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">14</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">15.9%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">2</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">29</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">33.0%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">3</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">12</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">13.6%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">4</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">12</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">13.6%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">5</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">10</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">11.4%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">6</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">3</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">3.4%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">7</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">2</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">2.3%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">10</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">5</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">5.7%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAC0AAACRCAQAAAD9G/kfAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAA/klEQVRo3u2aUQ6DIBAFofGOHqLnae/QU9qvJmBkZVkgrp33R2Im5rEZDRq3MCqPYWSn6CVdvLcQntGCS3fOZyGgQYO+CjqmQjGZKYQwTU+ZVF8nTzOdcJd8uQqXfpR37XNCQIMGrcrOIVpPSPkDX9e0UEDLvj5PvlM+hw806DuikapUiCRV/YlDpVRb9sDn8IEGDVoVfC0Vgq9BgwatDFKVCilJte2TW4VUW/v3OXygQYNWxaevD6Vq+2/hl13Xq/HAVkD3DGjQoK+C9inVuS/BfWx94Ot+8Tl8oEGDtqCd+Lp4smBXa+FkoUcxt5gQ0KBBy5n1Etw3PrseiP4CZwIyHUAMshoAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII="></td>
+        <td align="center">88
+(50.0%)</td>
+      </tr>
+      <tr>
+        <td align="left">meth_user_unit
+[numeric]</td>
+        <td align="left">Quantity of meth sold to sellers
+(grams)</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">Mean (sd) : 2.8 (2.1)</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">min ≤ med ≤ max:</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">1 ≤ 2 ≤ 10</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">IQR (CV) : 3 (0.7)</td></tr></table></td>
+        <td align="left" style="padding:0;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">1</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">15</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">28.8%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">2</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">16</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">30.8%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">3</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">5</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">9.6%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">4</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">8</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">15.4%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">5</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">4</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">7.7%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">6</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">1</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">1.9%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">8</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">1</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">1.9%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 2px 0 7px;margin:0;border:0" align="right">10</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">2</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">3.8%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAACsAAACCCAQAAAB1R/ltAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAA3UlEQVRo3u3Y2w2DMAyF4ZOKHRmCecoOTFneonArxIaoVn+/IcQncM0hafroiXo9ogZju/JgNDd6SFJ5cbc83ZvQqVUTYGFhc61e3smmbCqVAZFcVCm1aMLb9wUqHvaWYJTWv0qsAYOFhc1F3upC3g6mRzjJW2uvYw0YLGxElmBU5UL0ekhWLERr+h5rwGBhYXORtzrJW9sidMMu89bT51gDBgsbkSUYtRuM9jg8vFv7P6Jf2bsKFha2MUvekrewsLAEow536N5w3N2h+zscesBgYf+ZbbHx//kmxGJnIXctpjcnx9UAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII="></td>
+        <td align="center">124
+(70.5%)</td>
+      </tr>
+      <tr>
+        <td align="left">yrs_working
+[numeric]</td>
+        <td align="left">Years working</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">Mean (sd) : 11.3 (6.3)</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">min ≤ med ≤ max:</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">1 ≤ 13 ≤ 20</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">IQR (CV) : 10 (0.6)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle">20 distinct values</td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAGcAAABKCAQAAAAMeoKaAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAABCUlEQVRo3u2aUQ6CMBAFqeGO3kHPA3fwlPplUgmmNLbd4fnmj0DIDt2l20J6TkpcogOwzv/ozPnBulNI9xQdYok86Pnz1HVz6SM61krEks06ZKxDxjpkrENGTGf+/RatWBp0jCCdFh2jWLKJ6aCSrcxefU1ZfZ1Mp1RfYslmHTLWIWMdMoPmnRbtJUhn1IZkYFewdPgWE6jTY7zEXgXWIWMdMmI68NVo7dwE16mdm8SSzTpkrEPGOmSsQ8Y6ZKxDRkynwQJh1A7nIB3SL5fVOsfWhz12OLvoHBuLqPEq6kQ95046nLo4gtiL2jpkrEPGOmTEdFI+6a+n6gDe3LLuPZ3S4CtiyWYdMi/6RyIsa5TEKQAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg=="></td>
+        <td align="center">16
+(9.1%)</td>
+      </tr>
+      <tr>
+        <td align="left">seller_same_level
+[numeric]</td>
+        <td align="left">No. of known sellers on same market
+level</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">Mean (sd) : 9.8 (17.5)</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">min ≤ med ≤ max:</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">0 ≤ 6 ≤ 200</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">IQR (CV) : 6.2 (1.8)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle">22 distinct values</td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAGcAAABKCAQAAAAMeoKaAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAAq0lEQVRo3u3bQQqAIBQA0Qzv2CE6T96hU9bWJNCCcLB5u8jFn7DlD8c0krn3AOb8JyfmD+nmR1pD7xFr8qHj9dVSHN17z/rQYJfNHDJzyMwhM4fMHDJzyMwhM4fMHDJzyMwhM4fMHDJzyMwhM4fMHDJzyMwhM4fMHDJzyMwhM4fMHDJzyMwhM4fMHDJzyAbLibUDW8NyHGfHp8h5t6/Tkvyh7GMGNxPBzCE7Ae6JCtcZCgC7AAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC"></td>
+        <td align="center">20
+(11.4%)</td>
+      </tr>
+      <tr>
+        <td align="left">link.yn
+[factor]</td>
+        <td align="left">Able to connect to other sellers?</td>
+        <td align="left" style="padding:8;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">1. No</td></tr><tr style="background-color:transparent"><td style="padding:0;margin:0;border:0" align="left">2. Yes</td></tr></table></td>
+        <td align="left" style="padding:0;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">121</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">68.8%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 5px 0 7px;margin:0;border:0" align="right">55</td><td style="padding:0 2px 0 0;border:0;" align="left">(</td><td style="padding:0;border:0" align="right">31.2%</td><td style="padding:0 4px 0 2px;border:0" align="left">)</td></tr></table></td>
+        <td align="left" style="vertical-align:middle;padding:0;background-color:transparent;"><img style="border:none;background-color:transparent;padding:0;max-width:max-content;" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAE8AAAAlCAQAAACpUnwxAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoAQIBDQAVxsYOAAAAfElEQVRYw+3WwQmAMAyF4UTc0R10Ht2hU+o1Cl7ahr7C/265hI8m0PhtyllGA+DlZY3FJbGIu//wzLbRNiuvSny48ODBgwdPKp9PrdR1SYvHK8Cr2/RMFM003LPpoDoSHr/bQZWzteLDhQcPHjx4UhHnzXTv6UV8uPBa8gDPqgujHWDWagAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg=="></td>
+        <td align="center">0
+(0.0%)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<p>Generated by <a href="https://github.com/dcomtois/summarytools">summarytools</a> 1.0.1 (<a href="https://www.r-project.org/">R</a> version 4.3.1)<br />2024-01-02</p>
+</div>
+<div id="characteristics-of-people-who-supply-drugs" class="section level3">
+<h3>Characteristics of People Who Supply Drugs</h3>
+</div>
+<div id="sell-to-sellers" class="section level3">
+<h3>Sell to Sellers</h3>
+</div>
+<div id="sell-to-consumers" class="section level3">
+<h3>Sell to Consumers</h3>
+</div>
+<div id="seller-stock-and-sales-during-covid-19" class="section level3">
+<h3>Seller Stock and Sales During COVID-19</h3>
+</div>
+</div>
+<div id="discussion" class="section level2">
+<h2>DISCUSSION</h2>
 </div>
 
 

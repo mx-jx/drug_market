@@ -1,14 +1,120 @@
-project:
-  type: manuscript
+# project:
+#   type: website
+#   output-dir: docs
+# website:
+#   title: "SA Drug Market"
+#   site-url: https://www.mx-jx.github.io/
+#   description: "SA Drug Market Datascape"
+#   navbar:
+#     left:
+#       - about.qmd
+#       - methods.qmd
+#       - results.qmd
+#       - summary.qmd
+#     right:
+#       # - text: Blog
+#       #   href: index.qmd
+#       - icon: github
+#         href: https://github.com/mx-jx/siobhon-egan.github.io
+#       - icon: twitter
+#         href: https://twitter.com/siobhon_egan
+#   page-footer:
+#     left: "Copyright 2024, MJ Stowe"
+#     right:
+#       - icon: github
+#         href: https://github.com/siobhon-egan/siobhon-egan.github.io
+#       - icon: twitter
+#         href: https://twitter.com/siobhon_egan
+# format:
+#   html:
+#     twitter-card:
+#       creator: "@MJxStowe"
+#       image: "images/profile.png"
+#       card-style: summary_large_image
+#     comments:
+#       utterances:
+#         repo: mx-jx/mx-jxsiobhon-egan.github.io
+#     toc: true
+#     toc-location: "left"
+#     code-link: true
+#     anchor-sections: true
+#     fig-cap-location: margin
+#     reference-location: margin
+#     mainfont: "Lato"
+#     monofont: "Fira Mono"
+#     footnotes-hover: true
+#     fontsize: 1em
+#     theme: minty
+#     css: styles.css
 
+project:
+  type: website
+  # resources:
+  #   -  project/wood/appfiles/
 
 execute:
   freeze: auto
 
+website:
+  title: "Quantum Jitter"
+  favicon: images/drugs.png
+  site-url: https://www.quantumjitter.com
+  description: "A data science and machine learning blog with the tidyverse at its {{< fa regular heart >}}"
+  twitter-card: true
+  open-graph: true
+  navbar:
+    logo: images/drugs.png
+    # logo-alt: "A box and whisker plot icon"
+    title: true
+    right:
+      - text: Methods
+        href: methods/index.qmd
+      - text: Results
+        href: results/index.qmd
+      # - text: Blog
+      #   href: blog/index.qmd
+      # - text: Package
+      #   href: https://cgoo4.github.io/usedthese/index.html
+      # - text: About
+      #   href: about/index.qmd
+      # - icon: rss
+      #   href: project/index-R.xml
+      - icon: github
+        menu:
+          - text: Source Code
+            url:  https://github.com/cgoo4/quantumjitter
+          - text: Report a Bug
+            url:  https://github.com/cgoo4/quantumjitter/issues
+  page-footer:
+    border: false
+    left: "Published with [Quarto](https://quarto.org/) v<?quarto.version?> | Hosted by [{{< iconify simple-icons netlify >}}](https://www.netlify.com)"
+    right: "© 2023 [Carl Goodwin](/about) | [MIT License](https://www.quantumjitter.com/license)"
+
 format:
   html:
-    toc: true
-    embed-resources: true
+    theme:
+      light: [flatly, scss/light.scss]
+      dark: [darkly, scss/dark.scss]
+    css: scss/styles.css
+    code-link: true
+    link-external-icon: true
+    link-external-newwindow: true
+    smooth-scroll: true
+    highlight-style: gruvbox
+    df-print: kable
     comments:
-      hypothesis: true
-  # docx: default
+      giscus:
+        repo: cgoo4/quantumjitter
+        category: "Comments"
+        mapping: "pathname"
+        reactions-enabled: true
+        loading: lazy
+        input-position: "bottom"
+        theme:
+          light: light_high_contrast
+          dark: dark_dimmed
+
+editor: visual
+
+filters:
+  - quarto-version.lua

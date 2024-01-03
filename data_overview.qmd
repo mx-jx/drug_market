@@ -1,16 +1,12 @@
+ ---
+title: "sa_drugmarket_datascape"
+format: html
+editor: visual
 ---
-title: "South African Drug Market Data Overview"
-output: html_document
-date: "2023-12-28"
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, message = FALSE, include=FALSE)
-```
 
 Welcome to the Drug Market Datascape!
  
-## Overview of the data
+## Over of the data
 
 ```{r}
 # Drug Market Tables
@@ -80,7 +76,7 @@ set_gtsummary_theme(theme_gtsummary_compact())
 
 ```
 
-```{r, echo=FALSE, include = FALSE}
+```{r}
 sa_drugmarket <- drug_market %>%
   dplyr::select(city.factor:link.yn)
 
@@ -90,22 +86,15 @@ ff_glimpse(sa_drugmarket)
 
 Summary of the data
 
-```{r drug-market, results="asis", warning=FALSE, include=TRUE}
-#If you want, choose bewtween this table below and the formatted one above [highly recommended!]
+```{r drug-market, results="asis", warning=FALSE}
+
 print(dfSummary(sa_drugmarket, 
                 varnumbers   = FALSE,
                 valid.col    = FALSE,
-                graph.magnif = 0.65), 
-      max.tbl.height = 500,
+                graph.magnif = 0.76), 
+      max.tbl.height = 300,
       method = "render")
 ```
-
-```{r, results="asis", warning=FALSE}
-
-print(dfSummary(sa_drugmarket,
-      method = "render"))
-```
-
 
 ### Characteristics of People Who Supply Drugs 
 
@@ -116,4 +105,3 @@ print(dfSummary(sa_drugmarket,
 ### Seller Stock and Sales During COVID-19
 
 ## DISCUSSION
-
